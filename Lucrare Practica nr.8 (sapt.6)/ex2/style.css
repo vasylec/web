@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(0, 20, 118);
+    font-family: Roboto;
+}
+
+#unu{
+    text-decoration: underline;
+    color: rgb(78, 255, 146);
+}
+
+hr{
+    width: 100px;
+}

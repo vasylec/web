@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(src/img1.jpg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: left;
+    background-size: 145%;
+
+}
+
+#unu{
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 20px;
+    font-family: Roboto;
+    color: rgb(92, 27, 27);
+}
+
+#doi{
+    text-align: center;
+    margin-top: 6vh;
+    font-size: 60px;
+    font-family: Italiano;
+    color: rgb(92, 27, 27);
+    letter-spacing: 6px;
+}
+
+#trei p{
+    text-align: center;
+    margin-top: 6vh;
+    font-family: Montserat;
+    color: rgb(92, 27, 27);
+    letter-spacing: 2px;
+
+}
+
+#patru{
+    text-align: center;
+    margin-top: 6vh;
+}
+
+button{
+    color: rgb(92, 27, 27);
+    background-color: white;
+    border-color: white;
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#facebook{
+    height: 50px;
+    width: 50px;  
+    margin-right: 10px;  
+}
+
+#instagram{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+#cinci{
+    margin-top: 10vh;
+    text-align: center;
+}

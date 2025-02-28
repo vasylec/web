@@ -5,7 +5,6 @@
 }
 
 h2{
-    margin-top: 20vh;
     text-align: center;
     font-size: 60px;
     color: rgb(0, 20, 118);
@@ -19,4 +18,34 @@ h2{
 
 hr{
     width: 100px;
+    margin: 30px auto;
+    border: 2px solid rgb(78, 255, 146);
+}   
+
+.container{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Roboto;
+    line-height: 30px;
+}
+
+.container button{
+    padding: 10px 40px;
+    font-size: 17px;
+    font-family: Roboto;
+    margin-top: 30px;
+    background-color: rgb(78, 255, 146);
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.background{
+    /* background-image: url(https://cdn.pixabay.com/photo/2022/09/21/17/02/blue-background-7470781_1280.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 20vh;
 }

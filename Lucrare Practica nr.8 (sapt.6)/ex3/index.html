@@ -23,9 +23,194 @@
         color: white;
         font-size: 50px;
     }
+    form{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .input{
+        color: white;
+        width: 400px;
+        height: 40px;
+        border-color: transparent;
+        margin-left: 25px;
+    }
+
+    label{
+        color: white;
+    }
+
+    hr{
+        width: 465px;
+        margin: auto;
+        margin-top : 10px;
+    }
+
+    .buttons{
+        margin-top: 20px;
+        width: 465px;
+        margin: auto;
+        text-align: left;
+        position: relative;
+    }
+
+    .buttons input{
+        margin-top: 20px;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+    
+    }
+
+    .buttons a{
+        background-color: transparent;
+        border-color: transparent;
+        color: white;
+        margin-top: 25px;
+        position: absolute;
+        right: 0;
+        font-family: Roboto;
+        text-decoration: none;
+    }
+
+    .buttons label{
+        margin-left: 50px;
+        position: absolute;
+        margin-top: 25px;
+        font-family: Roboto;
+        
+    }
+
+    .buttons button{
+        color: white;
+        background-color:rgb(255, 65, 96);
+        width: 465px;
+        height: 50px;
+        position: absolute;
+        margin-top: 80px;
+        font-size: 30px;
+        font-family: Roboto;
+        border-color: transparent;
+    }
+
+    .buttons button:hover{
+        cursor: pointer;
+        background-color: rgb(255, 138, 157);
+        transition: .5s;
+    }
+
+    /* .buttons p{
+        text-align: center;
+        margin: 0 auto;
+        color: white;
+        font-family: Roboto;
+        margin-top: 150px;
+        position: absolute;
+        margin-left: 232.5px;   
+        width: 50px;
+        height: 50px;
+        border: solid 1px white;
+    } */
+
+    .bottom{
+        margin-top: 170px;
+        width: 465px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bottom{
+        color: white;
+        font-family: Roboto;
+    }
+
+    /* ------------------------------ */
+
+    td{
+        padding: 10px;
+        background-color: rgb(2, 52, 255);
+    }
+
+    .sec{
+        padding: 0 50px;
+        text-align: left;
+        border-left: solid 1px white;
+    }
+
+    table{
+        /* border-collapse: collapse; */
+        background-color: rgb(2, 52, 255);
+        width: 200px;
+        float: left;
+    }
+
+    .sec-table{
+        margin-left: 55px;
+        background-color: rgb(0, 225, 255);
+    }
+
+    .sec-table td{
+        background-color: rgb(0, 225, 255);
+    }
+
+    a{
+        color: white;
+    }
+
+    
+    
+
 </style>
 <body>
     <h1>Classy Login Form</h1>
-    <i class="fa-solid fa-user" style="color: white;"></i>
+    
+    <form action="#" method="post">
+        <div>
+            <i class="fa-solid fa-user fa-2x" style="color: white;"></i>
+            <input type="text" name="" id="username" placeholder="User name" class="input"><hr><br>
+            <i class="fa-solid fa-lock fa-2x" style="color: white;"></i>
+            <input type="password" name="" id="" placeholder="Password" class="input"><hr><br>
+        </div>
+        <div class="buttons">
+            <input type="checkbox" name="" id="rememberme">
+            <label for="rememberme">Remember Me</label>
+            <a href="">Forgot Password?</a>
+            <button>Login</button>
+            <!-- <p>or</p> -->
+        </div>
+        <div class="bottom">
+            
+            <a href="" class="facebook">
+                <table>
+                    <tr>
+                        <td>
+                            <i class="fa-brands fa-facebook-f fa-lg" style="color: white;"></i>
+                        </td>
+                        <td class="sec">
+                            Facebook
+                        </td>
+                    </tr>
+                </table>
+            </a>
+
+            <a href="#" class="twitter">
+                <table class="sec-table">
+                    <tr>
+                        <td>
+                            <i class="fa-brands fa-twitter fa-lg" style="color: white;"></i>    
+                        </td>
+                        <td class="sec">
+                            Twitter
+                        </td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        
+
+    </form>
+
+
+
+
 </body>
 </html>

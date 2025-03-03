@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    nav{
+        padding-top: 50px;
+        position: relative;
+    }
+    nav div ul li{
+        text-transform: uppercase;
+        display: inline-block;
+        font-family: Roboto;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    nav div ul li a{
+        color: white;
+    }
+    .nav-bar{
+        margin-top: 10px;
+        margin-right: 40px;
+        text-align: right;
+        position: absolute;
+        right: 0;
+    }
+
+    .nav-logo{
+        margin-left: 40px;
+        position: relative;
+    }
+
+    .nav-logo, .nav-bar {
+        display: inline-block;
+    }
+
+    .nav-logo p{
+        font-family: Roboto;
+        font-size: 30px;
+        color: white;
+    }
+
+    .nav-logo p span{
+        color: goldenrod;
+    }
+
+    .first-page{
+        height: 90vh;
+        background-color: black;
+    }
+
+    /* --------------------------- */
+
+    .text-area{
+        color: white;
+        font-family: Roboto;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .text-area p{
+        margin: auto;
+        width: 70%;      
+    }
+
+    .text-area p, .text-area h2{
+        margin-top: 50px;
+    }
+    
+    .text-area h4{
+        font-size: 25px;    
+    }
+
+    .text-area h2{
+        font-size: 50px;
+    }
+
+    /* --------------------------- */
+
+    .buttons{
+        margin-top: 70px;
+    }
+
+    .buttons button{
+        padding: 15px 25px;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .download-btn a{
+        color: white;
+    }
+
+    .info-btn a{
+        color: goldenrod;
+    }
+
+    .info-btn{
+        background-color: transparent;
+        border-color: goldenrod;
+        border-width: 1px;
+    }
+
+    .download-btn{
+        background-color: goldenrod;
+        border-width: 1px;
+        border-color: transparent;
+    }
+
+    /* --------------------------- */
+
+    .second-page{
+        height: 100vh;
+        background-color:aquamarine;
+        font-family: Roboto;
+        padding-top: 50px;
+        text-align: center;         
+    }
+    
+    .second-page div h4{
+        font-size: 25px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+    
+    .second-page div{
+        display: inline-block;
+        margin: 0 25px;
+        text-align: center;
+        background-color: aqua;
+    }
+    .container{
+        width: 90%;
+    }
+
+    .second-page div p{
+        width: 250px;
+    }
+
+
+</style>
+<body>
+    <section class="first-page">
+        <header>
+            <nav>
+                <div class="nav-logo">
+                    <p>BA<span>KER</span></p>
+                </div>
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Portfolio</a></li>
+                        <li><a href="">Testimonial</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+
+        <div class="text-area">
+            <h4>WE ARE AT BAKER</h4>
+            <h2>STARTING A NEW JOURNEY!!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente ea illum recusandae a dolor aliquam itaque nesciunt odit repudiandae reprehenderit, corrupti dignissimos! Tempore nam repellat, omnis rem alias commodi, ad at autem officia ipsa facilis velit est. Velit repellat distinctio amet repellendus magni magnam tempore, mollitia dolores odio reiciendis!</p>
+            <div class="buttons">
+                <button class="download-btn"><a href="">DOWNLOAD NOW!</a></button>
+                <button class="info-btn"><a href="">LEARN MORE</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="second-page">
+        <div class="container">
+            <div>
+                <i class="fa-solid fa-lightbulb fa-5x"></i>
+                <h4>Creative Concept</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, et. Ad cupiditate quidem nam nisi.</p>
+            </div>
+    
+            <div>
+                <i class="fa-solid fa-message fa-5x"></i>
+
+                <h4>Amazing Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, et. Ad cupiditate quidem nam nisi.</p>
+            </div>
+    
+            <div>
+                <i class="fa-solid fa-coins fa-5x"></i>
+                <h4>Creative Concept</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, et. Ad cupiditate quidem nam nisi.</p>
+            </div>
+    
+            <div>
+                <i class="fa-solid fa-lock fa-5x"></i>
+                <h4>Creative Concept</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, et. Ad cupiditate quidem nam nisi.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

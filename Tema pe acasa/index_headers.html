@@ -12,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&display=swap" rel="stylesheet"></head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    
     <style>
     *{
         padding: 0;
@@ -23,19 +28,17 @@
         border: 1px solid black;
         margin-bottom: 50px;
     }
-        
     
     ul{
         list-style: none;
-        display: inline-flex;
     }   
+
+    li{
+        display: inline-block;
+    }
     
     a{
         text-decoration: none;
-    }
-    
-    .nav-1{
-        display: flex;
     }
 
     .nav-1 li{
@@ -45,37 +48,51 @@
     .logo{
         width: 500px;
         height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
     }
     .logo h4{
         font-family: "Sawarabi Gothic";
         font-size: 22px;
+        margin-top: 17px;
+        margin-left: 30px;
     }
     .bar{
         width: 80%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
         font-size: 16px;
         font-weight: 500;
         color: rgb(28,172,132);
+        display: inline;
         
+    }
+    .bar ul{
+        display: inline-block;
+        position: absolute;
+        right: 300px;
+        margin-top: 25px;
     }
     .bar ul li a{
         color : rgb(28,172,132);
     }
     .tel{
+        display: inline-block;
+        height: 70px;
+        position: absolute;
+        right: 0;
         background-color: rgb(28,172,132);
         width: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         color: white;
     }
     .fa-phone-volume{
         margin-right: 15px;
+    }
+
+    .tel i{
+        margin-top: 34px;
+        margin-left: 27px;
+    }
+    .tel h4{
+        display: inline;
+        /* padding-top: 40px; */
     }
     
     /* --------------------------------------------- */
@@ -91,6 +108,11 @@
         background-color: rgb(234, 234, 234);
         display: flex;
     }
+
+    .bottom ul{
+        display: flex;
+    }
+
     .logo-1{
         height: 80px;
         width: 40%;
@@ -274,7 +296,7 @@
         
     }
 
-    .fa-location-dot, .info-table .fa-phone{
+    .location-dot, .info-table .fa-phone{
         background-color: rgb(60, 60, 60);
         color: white;
         padding: 12px;
@@ -306,8 +328,228 @@
     .top-2{
         height: 80px;
     }   
+
+    .top-2 div{
+        display: inline-block;
+    }
+
+    .logo-3{
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+
+    .logo-3 h4{
+        font-family: Playfair Display;
+        font-size: 30px;
+    }
+
+    .top-2 > div > div {
+        width: 300px;
+        color: rgb(28,172,132);
+    }
+
+    .top-2 > div > div > p{
+        margin-top: 8px;
+    }
+
+    .info-1{
+        margin-top: 25px;
+        position: absolute;
+        right: 0;
+    }
+
+    .top-2 > div > div > i{
+        float: left;
+        font-size: 35px;
+        margin-right: 15px;
+    }
+
     .bottom-2{
         height: 60px;
+        width: 100%;
+        background-color: rgb(28,172,132);
+    }
+
+    .bottom-2 .icons{
+        margin-left: 100px;
+        display: inline-block;
+    }
+
+    .bottom-2 .bar-2{
+        display: inline-block;
+        position: absolute;
+        right: 100px;
+    }
+    
+    .bottom-2 .bar-2 ul li{
+        padding: 0 30px;
+        height: 60px;
+        padding-top: 20px;
+    }
+    .bottom-2 .bar-2 ul li a{
+        color: white;
+    }
+    .bottom-2 .bar-2 ul li:hover{
+        cursor: pointer;
+    }
+
+    .bottom-2 .bar-2 ul i{
+        color: white;
+        font-size: 25px;
+    }
+
+    .arrow{
+        margin-top: 16px;
+        height: 25px;
+        width: 25px;
+        border-radius: 100%;
+    }
+
+    .bottom-2 .icons i{
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        color: white;
+        border: 2px solid white;
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+        border-radius: 100%;
+    }
+
+
+    /* ------------------------------------------------------------------------------- */
+
+
+    .top-3{
+        height: 50px;
+        background-color: rgb(28,172,132);
+    }
+    .bottom-3{
+        height: 100px;
+        background-color: rgb(60, 60, 60);
+    }
+
+    .info-2{
+        margin-left: 100px;
+        display: inline-block;
+        width: 400px;
+        height: 50px;
+        /* background: red; */
+        color: white;
+    }
+
+    .info-2 i{
+        margin-top: 19px;
+        float: left;
+        color: white;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+
+    .info-2 p{
+        margin-top: 15px;
+    }
+
+    #this{
+        float: left;
+        margin-right: 50px;
+    }
+
+    .icons-1{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        width: 400px;
+        height: 50px;
+        color: white;
+    }
+
+    .icons-1 i{
+        margin-right: 10px;
+        float: left;
+    }
+
+    .facebook{
+        margin-left: 100px;
+    }
+    
+    .circle{
+        font-size: 10px;
+        position: absolute;
+        top: 20px;
+        right: 380px;
+    }
+    
+    .icons-1 div{
+        display: inline-block;
+    }
+
+    .icons-1 .ic i{
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 100%;
+
+    }
+
+    .icons-1 p{
+        float: left;
+        position: absolute;
+        top: 15px;
+        right: 300px;
+    }
+
+    .ic{
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+
+    .logo-4{
+        display: inline-block;
+        width: 300px;
+        height: 100px;
+        color: white;
+    }
+
+    .logo-4 h4{
+        font-size: 18px;
+        margin-top: 40px;
+        margin-left: 80px;
+    }
+
+    .bar-3{
+        display: inline-block;
+        position: absolute;
+        left: 470px;
+        width: 800px;
+        height: 100px;
+    }
+
+    .bar-3 ul li{
+        display: inline-block;
+        margin: 0 30px;
+        margin-top: 39px;
+    }
+
+    .bar-3 ul li a{
+        color: white;
+    }
+
+    .button{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        width: 400px;
+        height: 100px;
+    }
+
+    .button button{
+        background-color: transparent;
+        border: 2px solid white;
+        padding: 10px 60px;
+        border-radius: 20px;
+        color: white;
+        margin-top: 30px;
     }
 
 </style>
@@ -336,6 +578,9 @@
             </div>
         </nav>
     </header>
+
+<h2>Display:Flex</h2>
+
 
     <header>
         <nav>
@@ -397,7 +642,7 @@
                             <table class="info-table">
                                 <tr>
                                     <td rowspan="2">
-                                        <i class="fa-solid fa-location-dot fa-2x"></i>
+                                        <i class="fa-solid fa-location-dot fa-2x location-dot"></i>
                                     </td>
                                     <td>Located at:</td>
                                 </tr>
@@ -434,10 +679,84 @@
     <header>
         <nav>
             <div class="top-2">
-
+                <div class="logo-3">
+                    <h4>Demo Logo</h4>
+                </div>
+                <div class="info-1">
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Baluwatar, Kathmandu</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+977 9876543210</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Company@gmail.com.np</p>
+                    </div>
+                </div>
             </div>
             <div class="bottom-2">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="bar-2">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">COMPANY</a></li>
+                        <li><a href="">PORTFOLIO</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                        <li><a href="">GET QUOTE</a></li>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </ul>
+                </div>                
+            </div>
+        </nav>
+    </header>
 
+    <header>
+        <nav>
+            <div class="top-3">
+                <div class="info-2">
+                    <i class="fa-solid fa-circle"></i>
+                    <p id="this">+977 42647190</p>
+                    <i class="fa-solid fa-circle"></i>
+                    <p>Example@abc.com</p>
+                </div>
+                <div class="icons-1">
+                    <div>
+                        <i class="fa-solid fa-circle circle"></i>
+                        <p>Follow Us:</p>
+                    </div>
+                    <div class="ic">
+                        <i class="fa-brands fa-facebook-f facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-3">
+                <div class="logo-4">
+                    <h4>Company Logo</h4>
+                </div>
+                <div class="bar-3">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <button>Button text</button>
+                </div>
             </div>
         </nav>
     </header>

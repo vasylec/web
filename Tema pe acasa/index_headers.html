@@ -221,6 +221,54 @@
         color: white;
         transition: .3s;
     }
+
+
+    /* --------------------------------------------- */
+
+
+    .panel{
+        height: 180px;
+        background-color: rgb(28,172,132);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .top-1{
+        background-color: red;
+        height: 120px;
+        width: 80%;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .bottom-1{
+        background-color: rgb(60, 60, 60);
+        border-radius: 10px;
+        height: 60px;
+        width: 80%;
+    }
+    .logo-2{
+        background-color: #fff;
+    }
+    .info{
+        background-color: bisque;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tel-2{
+        margin-right: 20px;
+        /* padding-top: 50px; */
+        /* margin-bottom: auto; */
+        /* height: 90px; */
+        /* display: flex; */
+    }
+
+    .location{
+        margin-left: 20px;
+    }
+
 </style>
 <body>
     <header class="header-1">
@@ -277,6 +325,53 @@
                     <div class="clone-1">
                         <p>0</p>
                     </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <header>
+        <nav>
+            <div class="panel">
+                <div class="top-1">
+                    <div class="logo-2">
+                        <h4>Demo Logo</h4>
+                    </div>
+                    <div class="info">
+                        <div class="tel-2">
+                            <table bgcolor="black">
+                                <tr bgcolor="white">
+                                    <td rowspan="2">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </td>
+                                    <td>Call chat</td>
+                                </tr>
+                                <tr bgcolor="white">
+                                    <td>78456218456</td>
+                                </tr>
+                            </table>
+                        
+                        
+                            <!-- <h4>Call chat</h4> -->
+                        </div>
+                        <div class="location">
+                            <table bgcolor="black">
+                                <tr bgcolor="white">
+                                    <td rowspan="2">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </td>
+                                    <td>located at</td>
+                                </tr>
+                                <tr bgcolor="white">
+                                    <td>Nepal, Kathamu</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-1">
+
                 </div>
             </div>
         </nav>

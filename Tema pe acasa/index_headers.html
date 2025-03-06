@@ -223,50 +223,91 @@
     }
 
 
-    /* --------------------------------------------- */
+    /* ------------------------------------------------------------------------------------- */
 
 
     .panel{
         height: 180px;
         background-color: rgb(28,172,132);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     }
     .top-1{
-        background-color: red;
         height: 120px;
         width: 80%;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
+        margin: auto;
+        
     }
     .bottom-1{
         background-color: rgb(60, 60, 60);
+        margin: auto;
         border-radius: 10px;
         height: 60px;
         width: 80%;
     }
     .logo-2{
-        background-color: #fff;
+        display: inline-block;
+        margin-top: 8px;
     }
     .info{
-        background-color: bisque;
         width: 35%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
+        margin-top: 30px;
+        position: absolute;
+        right: 130px;
     }
     .tel-2{
-        margin-right: 20px;
-        /* padding-top: 50px; */
-        /* margin-bottom: auto; */
-        /* height: 90px; */
-        /* display: flex; */
+        float: left;
+        margin-right: 40px;
+        margin-left: 70px;        
     }
 
-    .location{
-        margin-left: 20px;
+    .info-table tr td{
+        color: white;
+    }
+
+    .info-table tr td b{
+        font-size: 18px;
+    }
+
+    #img-logo{
+        height: 100px;
+        width: 100px;
+        
+    }
+
+    .fa-location-dot, .info-table .fa-phone{
+        background-color: rgb(60, 60, 60);
+        color: white;
+        padding: 12px;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    .bottom-1 ul a{
+        color: white;
+    }
+
+    .bottom-1 ul{
+        position: absolute;
+        right: 170px;
+    }
+
+    .bottom-1 ul li{
+        padding: 20px 30px;
+    }
+
+    .bottom-1 ul li:hover{
+        cursor: pointer;
+    }
+    
+
+    /* ------------------------------------------------------------------------*/
+
+
+    .top-2{
+        height: 80px;
+    }   
+    .bottom-2{
+        height: 60px;
     }
 
 </style>
@@ -336,43 +377,67 @@
             <div class="panel">
                 <div class="top-1">
                     <div class="logo-2">
-                        <h4>Demo Logo</h4>
+                        <img src="https://png.pngtree.com/png-vector/20230223/ourmid/pngtree-modern-demo-logo-vector-file-png-image_6614515.png" alt="Logo" id="img-logo">
                     </div>
                     <div class="info">
                         <div class="tel-2">
-                            <table bgcolor="black">
-                                <tr bgcolor="white">
+                            <table class="info-table">
+                                <tr>
                                     <td rowspan="2">
-                                        <i class="fa-solid fa-phone"></i>
+                                        <i class="fa-solid fa-phone fa-2x"></i>
                                     </td>
-                                    <td>Call chat</td>
+                                    <td>Call or Chat:</td>
                                 </tr>
-                                <tr bgcolor="white">
-                                    <td>78456218456</td>
+                                <tr>
+                                    <td><b>78456218456</b></td>
                                 </tr>
-                            </table>
-                        
-                        
-                            <!-- <h4>Call chat</h4> -->
+                            </table>                        
                         </div>
                         <div class="location">
-                            <table bgcolor="black">
-                                <tr bgcolor="white">
+                            <table class="info-table">
+                                <tr>
                                     <td rowspan="2">
-                                        <i class="fa-solid fa-location-dot"></i>
+                                        <i class="fa-solid fa-location-dot fa-2x"></i>
                                     </td>
-                                    <td>located at</td>
+                                    <td>Located at:</td>
                                 </tr>
-                                <tr bgcolor="white">
-                                    <td>Nepal, Kathamu</td>
+                                <tr>
+                                    <td><b>Kathmandu, Nepal</b></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-1">
-
+                    <ul>
+                        <a href="">
+                            <li>About</li>
+                        </a>
+                        <a href="">
+                            <li>Investments</li>
+                        </a>
+                        <a href="">
+                            <li>Portofolio</li>
+                        </a>
+                        <a href="">
+                            <li>Recent News</li>
+                        </a>
+                        <a href="">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
                 </div>
+            </div>
+        </nav>
+    </header>
+
+    <header>
+        <nav>
+            <div class="top-2">
+
+            </div>
+            <div class="bottom-2">
+
             </div>
         </nav>
     </header>

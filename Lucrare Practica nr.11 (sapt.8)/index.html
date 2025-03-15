@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+    }
+    .sec-1{
+        background-color: black;
+        height: 600px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        gap: 20px;
+    }
+    nav{
+        /* background-color: rgb(30, 207, 75); */
+        height: 70px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+
+    .nav-buttons{
+        display: grid;
+        align-content: center;
+    }
+
+    .nav-buttons a:hover{
+        color: gold;
+        transition: .2s;
+    }
+
+    .nav-logo{
+        display: grid;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+    }
+
+    .nav-logo span{
+        color: gold;
+    }
+
+    div{
+        /* background-color: antiquewhite; */
+    }
+
+    .form{
+        background-color: bisque;
+        height: 400px;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .form .info{
+        height: 400px;
+        background-color: azure;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+
+    .form form{
+        height: 400px;
+        background-color: rgb(55, 184, 184);
+        display: grid;
+        padding: 25px;
+        grid-template-columns: auto auto;
+    }
+
+    .child-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .form-name{
+        font-size: 25px;
+    }
+
+</style>
+<body>
+    <section class="sec-1">
+        <header>
+            <nav class="container">
+                <div class="nav-logo">
+                    <h4>AUTO<span>ROAD</span></h4>
+                </div>
+                <div class="nav-buttons">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Our Car</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="form container">
+            <div class="info">
+
+            </div>
+            <div>
+                <form action="" method="post">
+                    <label for="" class="form-name">Make your trip</label>
+                    <label for="" class="child-1">PICK-UP LOCATION</label>
+                    <input type="text" name="" id="" class="child-1" placeholder="City, Airport, Station, etc">
+                    <label for="" class="child-1">DROP-OFF LOCATION</label>
+                    <input type="text" name="" id="" class="child-1" placeholder="City, Airport, Station, etc">
+                    <label for="pick-up-date" class="child-2">PICK-UP DATE</label>
+                    <label for="drop-off-date" class="child-2">DROP-OFF DATE</label>
+                    <input type="datetime" name="" id="pick-up-date" class="child-2" placeholder="Date">
+                    <input type="datetime" name="" id="drop-off-date" class="child-2" placeholder="Date">
+                    <label for="" class="child-1">PICK-UP TIME</label>
+                    <input type="time" name="" id="" class="child-1" placeholder="Time">
+                </form>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

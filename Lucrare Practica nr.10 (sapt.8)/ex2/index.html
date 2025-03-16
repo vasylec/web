@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        overflow-x: hidden;
+    }
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+    }
+
+    h4{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .bar{
+        height: 40px;
+        background-color: rgb(50, 50, 50);
+    }
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .gallery-section{
+        height: 500px;
+        width: 100vw;
+    }
+    
+    .gallery-bg{
+        position: absolute;
+        height: 500px;
+        width: 100vw;
+        background: #63a706;
+        transform: skew(-45deg) translate(50%,0px);   
+        z-index: 1;
+        
+    }
+
+    .gallery{
+        position: relative;
+        z-index: 2;
+        height: 500px;
+
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .gallery-photos{
+        height: 220px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gallery-photos div{
+        height: 220px;
+        width: 220px;
+    }
+
+    .gallery-photo-1, .gallery-photo-2, .gallery-photo-3, .gallery-photo-4{
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    
+    .gallery-photo-1{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/gallery/5.jpg);
+    }
+
+    .gallery-photo-2{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/gallery/6.jpg);
+    }
+    
+    .gallery-photo-3{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/gallery/3.jpg);
+        
+    }
+    .gallery-photo-4{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/gallery/2.jpg);
+    }
+    
+    .expert-section{
+        background-color: rgb(230, 230, 230);
+        height: 600px;
+    }
+
+    .expert{
+        height: 530px;
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    .expert-photo{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+    }
+
+    .expert-photo div{
+        background-color: white;
+        width: 220px;
+        height: 320px;
+        margin-top: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: left;
+    }
+
+    
+    .expert-photo h5{
+        margin-top: 230px;
+        font-size: 20px;
+    }
+
+    .expert-photo h5, .expert-photo h6, .expert-photo p{
+        margin-left: 5px;
+    }
+
+    .expert-photo h6{
+        font-weight: normal;
+        color: rgb(131, 131, 131);
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .expert-photo p{
+        font-size: 13px;
+        color: rgb(131, 131, 131);
+    }
+    
+    .expert-1{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/team/1.jpg);
+        
+    }
+
+    .expert-2{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/team/2.jpg);
+    }
+
+    .expert-3{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/team/3.jpg);
+    }
+
+    .expert-4{
+        background-image: url(https://tm.unlockdesizn.com/html/planter/images/team/4.jpg);
+    }
+
+    .price-section{
+        height: 835px;
+        background-color:aliceblue;
+    }
+
+    .price{
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    .price-type{
+        margin-top: 70px;
+        /* background-color: aqua; */
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items:  center;
+        gap: 15px;
+        
+    }
+
+    .price-type>div{
+        width: 220px;
+        height: 520px;
+        background-color: white;
+        box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.75);
+        transition:  .3s ease-in-out;
+    }
+    
+    .price-type>div:hover{
+        transform: scale(1.05);        
+    }
+
+
+    .price-type div:hover .price-shape{
+        background-color: #63a706;
+        transition: .3s;
+    }
+
+    .price-type div:hover .price-shape i, .price-type div:hover .price-shape h2, .price-type div:hover .price-shape p{
+        color: white;
+        transition: .3s;
+    }
+
+
+
+
+
+
+
+
+
+
+    .price-type>div i{
+        color: rgb(100, 100, 100);
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .price-type>div h2{
+        font-size: 30px;
+        color: #63a706;
+    }
+
+    .price-shape p{
+        color: rgb(100, 100, 100);
+        font-size: 10px;
+    }
+
+    .price-shape{
+        height: 200px;
+        width: 220px;
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+        background-color: rgb(225, 225, 225);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-text h3, .price-text p, .price-text button{
+        margin: 10px 0;
+    }
+
+    .price-text p{
+        color:rgb(131, 131, 131);
+        font-size: 14px;
+    }
+
+    .price-text h3{
+        margin: 25px 0;
+        color: #63a706;
+    }
+
+    .price-text button{
+        margin: 25px 0;
+        padding: 8px 35px;
+        background-color: #63a706;
+        border: 0;
+        color: white;
+        font-size: 17px;
+        border-radius: 20px;
+    }
+
+    .price-text button:hover{
+        background-color: #437004;
+        transition: .3s;
+    }
+
+    .improving-section{
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+</style>
+<body>
+    <div class="bar"></div>
+    <section class="gallery-section">
+        <div class="gallery-bg"></div>
+        
+        <div class="gallery container">
+            <h4>OUR GALLERY</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque minus ipsum corporis <br> nisi vero fugit soluta quia animi, totam dolore.</p>
+            <div class="gallery-photos">
+                <div class="gallery-photo-1"></div>
+                <div class="gallery-photo-2"></div>
+                <div class="gallery-photo-3"></div>
+                <div class="gallery-photo-4"></div>
+            </div>
+        </div>
+    </section>
+    <section class="expert-section">
+        <div class="expert container">
+            <h4>OUR EXPERT</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque minus ipsum corporis <br> nisi vero fugit soluta quia animi, totam dolore.</p>
+            <div class="expert-photo">
+                <div class="expert-1">
+                    <h5>Jeffrey Morgan</h5>
+                    <h6>- Senior Worker</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
+                </div>
+                <div class="expert-2">
+                    <h5>Anna Smith</h5>
+                    <h6>- Senior Worker</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
+                
+                </div>
+                <div class="expert-3">
+                    <h5>Williamson</h5>
+                    <h6>- Senior Worker</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
+                
+                </div>
+                <div class="expert-4">
+                    <h5>Shon Smith</h5>
+                    <h6>- Senior Worker</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="price-section">
+        <div class="price container">
+            <h4>OUR PRICING</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque minus ipsum corporis <br> nisi vero fugit soluta quia animi, totam dolore.</p>
+            <div class="price-type">
+                <div class="price-type-1">
+                    <div class="price-shape">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <h2>$35.00</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="price-text">
+                        <h3>BASIC</h3>
+                        <p>Garden Care</p>
+                        <p>Landscape & Lawn Moving</p>
+                        <p>Free Rubbish Removal</p>
+                        <p><s>Tree & Seed Planting</s></p>
+                        <p><s>Landscape Desiginng</s></p>
+                        <p><s>Cuttign Taresing</s></p>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </div>
+                <div class="price-type-2">
+                    <div class="price-shape">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <h2>$45.00</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="price-text">
+                        <h3>BASIC</h3>
+                        <p>Garden Care</p>
+                        <p>Landscape & Lawn Moving</p>
+                        <p>Free Rubbish Removal</p>
+                        <p><s>Tree & Seed Planting</s></p>
+                        <p>Landscape Desiginng</p>
+                        <p><s>Cuttign Taresing</s></p>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </div>
+                <div class="price-type-3">
+                    <div class="price-shape">
+                        <i class="fa-solid fa-gem"></i>
+                        <h2>$55.00</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="price-text">
+                        <h3>BASIC</h3>
+                        <p>Garden Care</p>
+                        <p>Landscape & Lawn Moving</p>
+                        <p>Free Rubbish Removal</p>
+                        <p><s>Tree & Seed Planting</s></p>
+                        <p>Landscape Desiginng</p>
+                        <p>Cuttign Taresing</p>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </div>
+                <div class="price-type-4">
+                    <div class="price-shape">
+                        <i class="fa-solid fa-box"></i>
+                        <h2>$70.00</h2>
+                        <p>per month</p>
+                    </div>
+                    <div class="price-text">
+                        <h3>BASIC</h3>
+                        <p>Garden Care</p>
+                        <p>Landscape & Lawn Moving</p>
+                        <p>Free Rubbish Removal</p>
+                        <p>Tree & Seed Planting</p>
+                        <p>Landscape Desiginng</p>
+                        <p>Cuttign Taresing</p>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+    <section class="improving-section">
+        <h4>IMPROVING FAST</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque minus ipsum corporis <br> nisi vero fugit soluta quia animi, totam dolore.</p>
+    </section>
+    <div class="bar"></div>
+</body>
+</html>

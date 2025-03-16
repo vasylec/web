@@ -17,7 +17,7 @@
         font-family: Roboto;
     }
     
-    i{
+    nav i{
         color:#63a706;
     }
 
@@ -83,7 +83,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
-        width: 100vw;
         height: 700px;
     }
 
@@ -226,16 +225,157 @@
         flex-direction: column;
     }
 
+    .service-section{
+        background-color: rgb(240, 240, 240);
+        padding-bottom: 100px;
+    }
+
     .service-text h2{
+        margin-top: 100px;
         margin-bottom: 20px;
     }
 
     .service-boxes{
-        
+        margin-top: 100px;
+        height: 520px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .service-boxes>div{
+        height: 250px;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-boxes>div>div{
+        height: 250px;
+        width: 350px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .service-boxes>div>div i{
+        font-size: 60px;
+    }
+   
+    .service-boxes>div>div:hover{
+        background-color: #63a706;
+        color: white;
+        transition: .3s;
+    }
+
+    .aboutus-section{
+        margin-top: 100px;
+        height: 600px;
+    }
+
+    .aboutus{
+        margin: 100px auto;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+
+    .aboutus>div{
+        height: auto;
+        width: 31%;
+    }
+
+    .aboutus-text h5, .aboutus-text h4, .aboutus-text p{
+        margin: 20px 0;
+    }
+
+    .aboutus-text h4{
+        color: #63a706;
+        font-size: 25px;
+        margin-top: 0;
+    }
+
+    .aboutus-text button{
+        padding: 5px 10px;
+        color: white;
+        background-color: #63a706;
+        border: 0px;
+    }
+
+    .aboutus-text button:hover{
+        background-color: white;
+        color: #63a706;
+        transition: .3s;
+    }
+
+    .aboutus-image img{
+        height: 500px;
+    }
+
+    .aboutus-form form{
+        text-align: center;
     }
 
     
 
+    .aboutus-form form input{
+        width: 300px;
+        height: 40px;
+    }
+
+    .aboutus-form form button{
+        padding: 15px 120px;
+        color: white;
+        background-color: #63a706;
+        border: 0;
+    }
+
+    .aboutus-form form button:hover{
+        color:#63a706;
+        background-color: white;
+        transition: .3s;
+    }
+
+    #phone{
+        width: 135px;
+    }
+
+    #input-service{
+        width: 135px;
+        margin-left: 25.5px;
+    }
+
+    #text{
+        height: 150px;
+    }
+
+    .aboutus-form input, .aboutus-form button, .aboutus-form label{
+        margin: 10px 0;
+    }
+
+    .aboutus-form-bg form p{
+
+        padding-top: 15px;
+
+    }
+
+    .aboutus-form-bg{
+        background-color: rgb(240, 240, 240);
+        width: 350px;
+        height: 480px;
+    }
+    .bar{
+        height: 40px;
+        background-color: rgb(50, 50, 50);
+    }
     </style>
 <body>
     
@@ -317,14 +457,83 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
         <div class="service-boxes container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-person"></i>
+                    <h4>Customer Focused</h4>
+                    <p>Lorem ipsum dolor sit a Oversit! Tempora recusandae beatae eaque consequatur, consequuntur itaque perspiciatis?</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-regular fa-id-card"></i>
+                    <h4>Licensed & Insured</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore quo veritatis suscipit quod eaque omnis.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    <h4>We Are World Wide</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quas molestias pariatur sequi ab earum, excepturi voluptatibus?</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-regular fa-life-ring"></i>
+                    <h4>Honest & Dependable</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit a modi doloremque amet!</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-gear"></i>
+                    <h4>Safety Works</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iure similique laboriosam molestias nemo porro vitae.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h4>Design & Build</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, facere.</p>
+                </div>
+            </div>
+            
+            
         </div>
     </section>
-
+    <section class="aboutus-section">
+        <div class="aboutus container">
+            <div class="aboutus-text">
+                <h4>About Us</h4>
+                <h5>Want To Know Everything</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima illo porro pariatur nostrum nesciunt saepe quibusdam officia ex alias molestiae. Rem repellat laudantium nam praesentium? Distinctio labore necessitatibus eius reiciendis? Suscipit, expedita minima! Doloribus accusantium laudantium dolore. Dolore, blanditiis quos provident ea molestiae facilis voluptas debitis exercitationem odio unde esse aspernatur enim officiis at quaerat beatae quidem fugiat in similique ipsum veniam perspiciatis. Earum quaerat ipsa laudantium minus ex ea assumenda beatae laboriosam pariatur vel reiciendis, soluta sed iusto sunt adipisci saepe expedita quos eligendi accusamus? Sed molestiae, modi repellendus eveniet, assumenda suscipit atque illo amet cumque optio odio dolor?</p>
+                <button>Learn More</button>
+            </div>
+            <div class="aboutus-image">
+                <img src="2.png" alt="">
+            </div>
+            <div class="aboutus-form">
+                <div class="aboutus-form-bg">
+                    <form action="" method="post">
+                        <p></p>
+                        <label for="">Emergency +98-9875-5968-54 Or <br> Contact With Booking Form</label>
+                        <input type="text" placeholder="Full Name">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Phone" id="phone">
+                        <input list="service" id="input-service">
+                            <datalist id="service">
+                                <option value="Serice nr.1"></option>
+                                <option value="Serice nr.2"></option>
+                            </datalist>
+                        <input type="text" name="" id="text">
+                        <button>Get Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bar"></div>
 </body>
 </html>

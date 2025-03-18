@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -34,7 +35,6 @@
         gap: 20px;
     }
     nav{
-        /* background-color: rgb(30, 207, 75); */
         height: 70px;
         display: grid;
         grid-template-columns: auto auto;
@@ -62,37 +62,24 @@
         color: gold;
     }
 
-    div{
-        /* background-color: antiquewhite; */
-    }
-
     .form{
-        background-color: bisque;
         height: 400px;
-        /* margin-top: 50px; */
-        /* display: grid; */
-        /* grid-template-columns: auto auto auto auto; */
+        margin-top: 50px;
     }
 
     .form .info{
         width: 70%;
         float: left;
         height: 400px;
-        background-color: azure;
     }
 
     ._form{
         width: 100%;
         height: 400px;
+        padding-top: 8px;
     }
 
-    ._form input{
-        /* width: 10%; */
-    }
-
-    ._form label, ._form input{
-        /* margin-top: 20px; */
-    }
+    
 
     ._form label{
         font-weight: 500;
@@ -103,6 +90,8 @@
     ._form input{
         margin-bottom: 20px;
         width: 290px;
+        height: 25px;
+        border-color: 1px solid rgb(223, 223, 223);
     }
 
 
@@ -114,29 +103,164 @@
     form{
         float: right;
         width: 30%;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 20px;
-        background-color: blue;
+        background-color: white;
         display: grid;
         gap: 0px;
     }
 
-    /* .form form{
-        height: 400px;
-        background-color: rgb(55, 184, 184);
-        display: grid;
-        padding: 25px;
-        grid-template-columns: auto auto;
+    form button{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: orange;
+        border: 0;
+        color: white;
+        font-weight: 600;
+        transition: .3s ease-in-out;
     }
 
-    .child-1{
-        grid-column-start: 1;
-        grid-column-end: 3;
+    form button:hover{
+        background-color: white;
+        color: orange;
     }
+
+    form p{
+        margin: 7px 0;
+    }
+
+
+
     
-    .form-name{
-        font-size: 25px;
-    } */
+
+    #pick-up-date, #drop-off-date{
+        width: 120px;
+    }
+
+    .drop-off-date{
+        margin-left: 43px;
+    }
+
+    .info-container{
+        width: 80%;
+        color:white;
+    }
+
+    .info-container h4{
+        font-size: 50px;
+        font-weight: 0;
+        margin-bottom: 30px;
+    }
+
+    .info-container div{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-content: start;
+        padding-top: 30px;
+    }
+
+    .info-container i{
+        border: solid orange 20px;
+        border-left: solid orange 22px;
+        border-radius: 100%;
+        background-color: orange;
+        color: white;
+    }
+
+    .info-container div p{
+        font-size: 12px;
+    }
+
+    .info-container hr{
+        width: 40px;
+        height: 1px;
+        margin: 0 20px;
+    }
+
+    .sec-2{
+        height: 200px;
+    }
+
+    .selecting{
+        height: 150px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+
+    .selecting div{
+        margin-top: 50px;
+        display: grid;
+        align-items:center;
+    }
+
+    .selecting div label{
+        font-weight: 700;
+    }
+
+    .selecting div input{
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .selecting div button{
+        padding: 10px 0;
+        margin-top: 22px;
+        background-color: orange;
+        border: 0;
+        color: white;
+        font-weight: 800;
+    }
+
+    .our-services{
+        height: 300px;
+    }
+
+    .our-services-title{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .our-services-title h6{
+        color: gold;
+    }
+
+    .our-services-title h4{
+        font-size: 50px;
+    }
+
+    .our-services-desc{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 150px;
+        gap: 50px;
+    }
+
+    .our-services-desc div{
+        background-color: aqua;
+        /* height: 150px; */
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
+    }
+
+    .our-services-desc div p{
+        grid-column-start: 1;
+        grid-column-end: 7;
+        
+    }
+
+    .our-services-desc div h4{
+        grid-column-start: 2;
+        grid-column-end: 6;
+    }
+
+
+    .our-services-desc div i{
+        font-size: 35px;
+    }
 
 </style>
 <body>
@@ -161,58 +285,124 @@
 
         <div class="form container">
             <div class="info">
-
+                <div class="info-container">
+                    <h4>Now <br> It's easy for you <br> rent a car</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, error autem porro provident esse amet. Sit aut beatae eveniet. Voluptate voluptatibus numquam voluptatem illo tempora.</p>
+                    <div>
+                        <i class="fa-solid fa-play"></i>
+                        <hr>
+                        <p>Easy steps for renting a car</p>
+                    </div>
+                </div>
+                
             </div>
 
             <div class="_form">
                 <form action="" method="post">
                     <label for="" class="form-title"><span class="form-title">Make your trip</span></label><br>
+
+                    <p></p>
+
                     <label for="">PICK-UP LOCATION</label><br>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" placeholder="City, Airport, Station etc">
 
                     <label for="">DROP-OFF LOCATION</label><br>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" placeholder="City, Airport, Station etc">
 
                     <table>
                         <tr>
                             <td>
-                                <label for="">DROP-OFF LOCATION</label><br>
-                                <input type="text" name="" id="">
+                                <label for="" id="">PICK-UP DATE</label><br>
+                                <input type="text" name="" id="pick-up-date" placeholder="Date">
                             </td>
                             <td>
-                                <label for="">DROP-OFF LOCATION</label><br>
-                                <input type="text" name="" id="">
+                                <label for="" id="" class="drop-off-date">DROP-OFF DATE</label><br>
+                                <input type="text" name="" id="drop-off-date" class="drop-off-date" placeholder="Date">
                             </td>
                         </tr>
                     </table>
 
                     <label for="">PICK-UP TIME</label><br>
-                    <input type="text" name="" id="">
+                    <input type="datetime" name="" id="" placeholder="Time">
+
+                    <button>Search Vehicle</button>
                 </form>
             </div>
-            
-            
-            
-            
-            
-            
-            <!-- <div>
-                <form action="" method="post">
-                    <label for="" class="form-name">Make your trip</label>
-                    <label for="" class="child-1">PICK-UP LOCATION</label>
-                    <input type="text" name="" id="" class="child-1" placeholder="City, Airport, Station, etc">
-                    <label for="" class="child-1">DROP-OFF LOCATION</label>
-                    <input type="text" name="" id="" class="child-1" placeholder="City, Airport, Station, etc">
-                    <label for="pick-up-date" class="child-2">PICK-UP DATE</label>
-                    <label for="drop-off-date" class="child-2">DROP-OFF DATE</label>
-                    <input type="datetime" name="" id="pick-up-date" class="child-2" placeholder="Date">
-                    <input type="datetime" name="" id="drop-off-date" class="child-2" placeholder="Date">
-                    <label for="" class="child-1">PICK-UP TIME</label>
-                    <input type="time" name="" id="" class="child-1" placeholder="Time">
-                </form>
-            </div> -->
         </div>
+    </section>
+    <section class="sec-2">
+        <div class="selecting container">
+            <div>
+                <label for="">Select Model</label>
+                <input list="model" placeholder="Select Model">
+                <datalist id="model">
+                    <option value="Option 1"></option>
+                    <option value="Option 2"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="">Select Brand</label>
+                <input list="brand" placeholder="Select Brand">
+                <datalist id="brand">
+                    <option value="Option 1"></option>
+                    <option value="Option 2"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="">Year Model</label>
+                <input list="year" placeholder="Year Model">
+                <datalist id="year">
+                    <option value="Option 1"></option>
+                    <option value="Option 2"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="">Price Limit</label>
+                <input list="price" placeholder="$1">
+                <datalist id="price">
+                    <option value="Option 1"></option>
+                    <option value="Option 2"></option>
+                </datalist>
+            </div>
+            <div>
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+    <section class="our-services">
+        <div class="container">
+            <div class="our-services-title">
+                <h6>OUR SERVICES</h6>
+                <h4>Our Services</h4>
+            </div>
+            <div class="our-services-desc">
+                <div>
+                    <i class="fa-solid fa-wrench"></i>
+                    <h4>24/7 Car Support</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sequi illum maiores nobis tempore dignissimos.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wrench"></i>
+                    <h4>Lots of Location</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sequi illum maiores nobis tempore dignissimos.</p>
+                
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-flatbed-suitcase"></i>
 
+                    <h4>Reservation</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sequi illum maiores nobis tempore dignissimos.</p>
+                
+                </div>
+                <div>
+                    <i class="fa-solid fa-car"></i>
+
+                    <h4>Rental Cars</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sequi illum maiores nobis tempore dignissimos.</p>
+                    
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

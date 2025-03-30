@@ -25,13 +25,14 @@ a:hover {
 }
 
 a.more{ 
-	display: block; 
+	display: grid; 
 	width: 71px; 
 	line-height: 24px; 
 	text-align: center; 
 	text-decoration: none; 
 	font-weight: bold; 
-	background: url(images/more_btn.png) no-repeat top center; 
+	background-color: #e6e6e6;
+	border-radius: 3px;
 	color: #333; 
 	text-shadow: 1px 1px 1px #fff; 
 }
@@ -56,7 +57,6 @@ h4 { font-size: 18px; margin: 0 0 15px; padding: 0; }
 h5 { font-size: 16px; margin: 0 0 10px; padding: 0;  }
 h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
-.cleaner { clear: both }
 .h10 { height: 10px }
 .h20 { height: 20px }
 .h30 { height: 30px }
@@ -64,11 +64,9 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 .h50 { height: 50px }
 .h60 { height: 60px }
 
-.float_l { float: left }
-.float_r { float: right }
+
 
 .image_wrapper { 
-	display: inline-block; 
 	border: 1px solid #fff; 
 	padding: 3px; 
 	background: none; 
@@ -76,12 +74,10 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 .image_fl { 
-	float: left; 
 	margin: 3px 30px 0 0; 
 }
 
 .image_fr { 
-	float: right; 
 	margin: 3px 0 0 30px; 
 }
 
@@ -95,7 +91,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	color:#e17112; 
 	margin: 0; 
 	padding: 0 0 5px 20px; 
-	/* background: url(images/tooplate_list.png) no-repeat scroll 0 3px;   */
 }
 
 .tooplate_list li a { 
@@ -120,15 +115,8 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	height: 120px; 
 	overflow: hidden; 
 	padding: 0 10px; 
-	/* background-color: white; */
-	/* background: url(images/tooplate_header.png) bottom no-repeat;  */
-	/* background-color: white; */
 }
 
-#site_title { 
-	float: left; 
-	display: block; 
-}
 
 #site_title h1 { 
 	margin: 0; 
@@ -136,12 +124,8 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 #site_title h1 a { 
-	display: block; 
-	/* width: 200px;  */
 	height: 54px; 
 	color:#d76300; 
-	/* text-indent: -10000px;  */
-	/* background: url(images/tooplate_logo.png) no-repeat top left;  */
 	font-size: 35px;
 	text-decoration: none;
 }
@@ -157,8 +141,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 #tooplate_menu { 
 	display: flex;
 	margin-left: 370px;
-	/* width: 550px;  */
-	margin-top: 70px; 
+	margin-top: -13px; 
 	background-color: rgb(61, 61, 61);
 	border-radius: 5px;
 	padding-top: 10px;
@@ -167,21 +150,18 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 #tooplate_menu ul { 
 	margin: 0; 
-	/* padding: 0;  */
 	list-style: none; 
-	/* background-color: white; */
-	/* padding: 50px 10px; */
+	display: flex;
 }
 
 #tooplate_menu ul li { 
 	padding: 0; 
 	margin: 0; 
-	display: inline; 
 }
 
 #tooplate_menu ul li a {
-	float: left;
-	display: block;
+	display: flex;
+	justify-content: center;
 	width: 98px;
 	border: 2px solid transparent;
 	line-height: 30px;
@@ -199,7 +179,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	background-color:#d76300;
 	border-radius: 5px;
 	border: 2px solid #773700;
-	/* background: url(images/tooplate_menu.png) no-repeat */
 }
 /* end of menu */
 
@@ -207,31 +186,24 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	position: relative;
 	width: 940px;
 	padding: 0 14px;
-	/* background: url(images/tooplate_main.png) repeat-y; */
-	/* background-color: white; */
 	background-color: white;
 	padding-top: 15px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	/* padding-top: 10px; */
 }
 
 #tooplate_middle {
 	width: 940px;
 	height: 300px;
 	margin-bottom: 10px;
-	/* background: url(images/tooplate_middle.png) no-repeat; */
-
 	background-color:#e17112;
 	border-radius: 10px;
-	
 	display: flex;
 
 
 }
 
 #tooplate_middle .mid_box {
-	/* float: left; */
 	margin: 70px 0 0 40px;
 	padding: 20px;
 	width: 200px;
@@ -253,16 +225,11 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 #tooplate_middle .mid_box h2 { color: #fc8927 }
 
 #tooplate_middle .main_box {
-	/* float: right;  */
 	width: 270px;
 	padding-top: 24px;
 	padding-right: 30px;
 	background-color:#e17112;
 	padding-left: 60px;
-	/* background-color: #000; */
-
-	/* padding-left: 100px; */
-	/* margin-left: 0px; */
 	z-index: 1;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
@@ -279,12 +246,11 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 #tooplate_middle .main_box_title span {
-	display: block;
 	font-size: 30px;
 }
 
 #tooplate_middle a.learn_here {
-	display: block;
+	display: grid;
 	width: 242px;
 	line-height: 53px;
 	font-size: 24px;
@@ -294,7 +260,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	text-shadow: 1px 1px 1px #fff;
 	background-color: white;
 	border-radius: 5px;
-	/* background: url(images/tooplate_learn_here_btn.png) no-repeat */
 }
 
 #tooplate_middle a.learn_here:hover {
@@ -305,9 +270,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 #tooplate_content {
 	width: 900px;
 	padding: 20px;
-	/* display: grid; */
-	/* grid-template-columns: repeat(3, 1fr); */
-	
 }
 
 .first_content{
@@ -326,7 +288,8 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 .con_tit_02 { 
 	font-size: 24px; 
 	color: #000; 
-	margin-bottom: 15px; 
+	width: 200px;
+	margin-bottom: 10px;
 }
 
 .col_w900 { width: 900px; margin-bottom: 40px; padding-bottom: 40px;  }
@@ -341,11 +304,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
-}
-
-.con_tit_02{
-	text-align: center;
-	margin-bottom: 50px;
 }
 
 .second_content{
@@ -365,13 +323,10 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 .post_box { 
-	clear: both; 
-	display: block; 
 	margin: 0 0 60px; 
 }
 
 .post_box img { 
-	/* float: left;  */
 	width: 420px; 
 	height: 210px; 
 }
@@ -387,47 +342,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 .post_header  h2 { 
 	margin-bottom: 5px; 
 }
-/* 
-#gallery { 
-	margin: 0; 
-	padding: 0; 
-}
-
-#gallery ul { 
-	margin: 0; 
-	padding: 0; 
-	list-style: none; 
-}
-
-#gallery ul li { 
-	display: block; 
-	position: relative; 
-	float: left; 
-	width: 280px; 
-	margin: 0 20px 20px 0; 
-}
-
-#gallery ul .lmb { 
-	margin: 0 0 20px 0; 
-}
-
-#gallery ul li a img { 
-	width: 270px; 
-	height: 160px; 
-	border: 1px solid #fff; 
-	padding: 4px; 
-	background: #000;
-}
-
-#gallery ul li span { 
-	position: absolute; 
-	display: block; 
-	width: 220px; 
-	line-height: 30px; 
-	left: 20px; bottom: 15px; 
-	padding-left: 20px; 
-	background: url(images/cap_bg.png) no-repeat;  
-} */
 
 #gallery ul li span a { 
 	color: #fff; 
@@ -462,7 +376,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 
 #contact_form form label { 
-	display: block; 
 	width: 100px; 
 	margin-right: 10px; 
 	font-size: 14px; 
@@ -491,19 +404,19 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 #tooplate_footer {
 	width: 968px;
-	/* padding: 60px 0 10px;  */
 	color: #333;
 	text-align: center;
-	/* margin: 0 auto; */
-	/* background: url(images/tooplate_footer.png) top no-repeat; */
 	background-color: white;
-	/* border-radius: 10px; */
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	padding-bottom: 200px;
+	padding-bottom: 40px;
 }
 
 #footer_{
 	text-align: center;
 	margin-top: 20px;
+}
+
+hr{
+	margin-bottom: 40px;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const cr_sec = document.createElement('section');
+        document.body.appendChild(cr_sec);        
+        document.body.style.margin = '0';
+        document.body.style.padding = '0';        
+
+
+        cr_sec.innerHTML = '';
+        // for (let i = 1; i <= 10; i++) {
+            
+        
+        //     for (let j = 0; j < i; j++) {
+            //         cr_sec.innerHTML += '⭐';                
+            
+            //     }
+            //     cr_sec.innerHTML += '<br>';                
+            // }
+            
+            
+
+        // for (let i = 1; i < 5; i++) {
+        //     const div = document.createElement('div');
+        //     div.textContent = '';
+        //     for (let j = 0; j < i; j++) {
+        //         div.textContent += '⭐';
+        //     }
+        //     cr_sec.appendChild(div);
+            
+        // }
+
+                for (let i = 1; i < 31; i++) {
+                const div = document.createElement('div');
+                div.style.display = "flex";
+                div.style.justifyContent = 'center';
+                div.style.backgroundColor = randColor();
+                div.textContent = '';
+    
+                for (let j = 0; j < i; j++) {
+                    const p = document.createElement('p');
+                    p.textContent = '⭐';
+                    p.style.margin = "0";
+                    p.style.backgroundColor = randColor();
+                    div.appendChild(p);
+                }
+                cr_sec.appendChild(div);
+            }    
+
+            cr_sec.style.display = '';
+            
+
+        
+        function randColor(){
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            let culoareRGB = `rgb(${r}, ${g}, ${b})`;        
+
+            return culoareRGB;
+        }
+
+        document.body.style.backgroundColor = randColor();
+    </script>
+</body>
+</html>

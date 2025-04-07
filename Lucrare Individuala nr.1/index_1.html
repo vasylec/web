@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+    }
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .button{
+        background-color: #f87414;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        border-color: transparent;
+        transition: ease-in-out 200ms;
+    }   
+
+    .button:hover{
+        background-color: #ad500e;
+        cursor: pointer;
+    }
+    
+    .logo,li{
+        display: inline;
+    }
+    
+    header{
+        height: 100px;
+    }
+    
+    .logo{
+        position: absolute;
+        margin-top: 30px;
+        font-weight: 1000;
+        font-size: 30px;
+        color: #f87414;
+    }
+    
+    ul{
+        font-weight: 500;
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 590px;
+        cursor: pointer;
+    }
+
+    li{
+        margin: 0 20px;
+    }
+
+    .img-section{
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url('https://keystoneacademic-res.cloudinary.com/image/upload/v1698062208/Hero_images_1_m1zp6u.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        background-blend-mode: color;
+        height: 600px;
+    }
+    h1{
+        text-align: center;
+        color: white;
+        font-size: 80px;
+        padding-top: 120px;
+    }
+    p{
+        margin-top: 50px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    .img-section>div{
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+
+</style>
+<body>
+    <header class="container">
+        <div class="logo">adsWorld</div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Service</li>
+                <li>Pricing</li>
+                <li>Contact</li>
+                <li class="button">Get Started</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="img-section">
+        <h1>We Help Your Business <br> Grow Faster</h1>
+        <p>Make your business to be known worldwide <br> and get 100% engagement online</p>
+        <div>
+            <button class="button">Get Started</button>
+        </div>
+    </section>
+</body>
+</html>

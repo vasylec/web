@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto;
+        }
+
+        body{
+            background-color:aquamarine;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        .table{
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 1000px;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .eq{
+            width: 14%;
+            height: 45%;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .circle{
+            padding: 5px 18px;
+            border-radius: 100%;
+            background-color: aqua;
+            position: absolute;
+            margin-bottom: 250px;
+            font-size: 40px;
+            background-blend-mode:darken;
+        }
+    </style>
+<body>
+    <script>
+        const title = document.createElement('h1');
+        title.textContent = 'Tabla Inmultirii';
+        
+        const table = document.createElement('div');
+        table.classList.add('table');
+        
+        for (let i = 0; i <= 10; i++) {
+            color = randColor();
+            
+            const div = document.createElement('div');
+            div.classList.add('eq');
+
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.backgroundColor = color;
+            circle.textContent = i
+            if(i == 10){
+                circle.style.padding = '5px 8px';
+            }
+
+            div.appendChild(circle);
+            for (let j = 1; j <= 10; j++) {
+                const p = document.createElement('p');
+                p.textContent = j + ' x ' + i + ' = ' + (j * i);
+                
+
+                div.appendChild(p);
+            }
+            
+            
+            
+            table.appendChild(div);
+        }
+        
+        
+        
+        document.body.appendChild(title);
+        document.body.appendChild(table);
+
+        
+        
+        
+        
+        function randColor(){
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            let culoareRGB = `rgb(${r}, ${g}, ${b})`;        
+
+            return culoareRGB;
+        }
+    </script>
+</body>
+</html>

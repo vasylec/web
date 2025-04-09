@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: rgb(184, 157, 48);
+    }
+
+    .chess{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 870px;      
+        gap: 10px;
+    }
+
+    .white{
+        background-color:rgb(255, 255, 255);
+        height: 100px;
+        width: 100px;
+    }
+
+    .black{
+        background-color: rgb(0, 0, 0);
+        height: 100px;
+        width: 100px;
+    }
+    .chess-background{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <script>
+        const bg = document.createElement('div');
+        const chess = document.createElement('div');
+
+        bg.classList.add('chess-background');
+        chess.classList.add('chess');
+        chess.innerHTML = '';
+
+        for (let i = 0; i < 8; i++) {
+            
+            for (let j = 0; j < 8; j++) {
+                if(i % 2 == 0){
+                    if(j % 2 == 0){
+                        chess.innerHTML += '<span class="white"></span>';
+                    }
+                    else{
+                        chess.innerHTML += '<span class="black"></span>';    
+                    }
+                }
+                else{
+                    if(j % 2 == 0){
+                        chess.innerHTML += '<span class="black"></span>';    
+                    }
+                    else{
+                        chess.innerHTML += '<span class="white"></span>';
+                    }
+                }
+                
+            }
+            
+            
+            
+            
+            // if(i % 8 === 0 && i !== 0){
+            //     chess.innerHTML += '<br>';       
+            // }
+        }
+
+        bg.appendChild(chess);
+
+        document.body.appendChild(bg);
+    </script>
+</body>
+</html>

@@ -11,104 +11,95 @@
         margin: 0;
         box-sizing: border-box;
     }
-
-    .piano{
-        height: 200px;
-        /* background-color: aqua; */
+    body{
+        background-color: gray;
     }
-
-    .white{
-        background-color:rgb(190, 193, 197);
-        height: 100%;
-        width: 50px;
-    }
-
-    .black_c{
-        position: absolute;
-        top: 200px;
-        width: 155px;
+    .white_keys{
+        height: 300px;
         display: flex;
-        justify-content: space-evenly;
-        /* background-color: black; */
+        gap: 5px;
+    }
+    .white{
+        height: 300px;
+        width: 50px;
+        background-color: white;
     }
 
+    .black_keys{
+        height: 200px;
+        width: 1150px;
+        gap: 5px;
+        display: flex;
+        justify-content: start;
+        position: absolute;
+        top: 0;
+    }
+    .black:nth-child(n){
+        margin-left: 23px;
+    }
+    .black:nth-child(1){
+        margin-left: 35px;
+    }
+    .black:nth-child(3){
+        margin-left: 70px;
+    }
+    .black:nth-child(6){
+        margin-left: 70px;
+    }
+    .black:nth-child(8){
+        margin-left: 70px;
+    }
+    .black:nth-child(11){
+        margin-left: 70px;
+    }
+    .black:nth-child(13){
+        margin-left: 70px;
+    }
+    
     .black{
-        height: 120px;
-        width: 25px;
+        height: 200px;
+        width: 30px;
         background-color: black;
     }
 
-    .p1>div{
-        height: 200px;
-        /* background-color: aquamarine; */
+    .piano{
         display: flex;
-        gap: 2px;
+        justify-content: center;        
     }
 
-    .p2>div{
-        height: 200px;
-        display: flex;
-    }
 </style>
 <body>
     <script>
+        const white_keys = document.createElement('div');
+        white_keys.classList.add('white_keys');
+
+        for (let i = 0; i < 21; i++) {
+            const white_key = document.createElement('div');
+            white_key.classList.add('white');
+            
+            white_keys.appendChild(white_key);
+        }    
+
+        
+
+        const black_keys = document.createElement('div');
+        black_keys.classList.add('black_keys');
+
+        for (let i = 0; i < 15; i++) {
+            const black_key = document.createElement('div');
+            black_key.classList.add('black');
+            
+            black_keys.appendChild(black_key);
+        }   
+   
+   
         const piano = document.createElement('div');
-        const pattern_1 = document.createElement('div');
-        const pattern_2 = document.createElement('div');
-
         piano.classList.add('piano');
-        pattern_1.classList.add('p1');
-        pattern_2.classList.add('p2');
-
-        
-        const white_c = document.createElement('div');
-        for (let i = 0; i < 3; i++) {
-            const div = document.createElement('div');
-            div.classList.add('white');
-            white_c.appendChild(div);
-        }
-        pattern_1.appendChild(white_c);
-        
-
-
-        const black_c = document.createElement('div');
-        black_c.classList.add('black_c');
-        for (let i = 0; i < 2; i++) {
-            const div = document.createElement('div');
-            div.classList.add('black');
-            black_c.appendChild(div);
-        }
-        pattern_1.appendChild(black_c);
-
-
-
-
-
-        const white_ = document.createElement('div');
-        for (let i = 0; i < 3; i++) {
-            const div = document.createElement('div');
-            div.classList.add('white');
-            white_.appendChild(div);
-        }
-        pattern_2.appendChild(white_);
-        
-
-
-        const black_ = document.createElement('div');
-        black_c.classList.add('black_c');
-        for (let i = 0; i < 2; i++) {
-            const div = document.createElement('div');
-            div.classList.add('black');
-            black_.appendChild(div);
-        }
-        pattern_2.appendChild(black_);
-        
-        
-
+        piano.appendChild(white_keys);
+        piano.appendChild(black_keys);
+   
 
         document.body.appendChild(piano);
-        document.body.appendChild(pattern_1);
-        document.body.appendChild(pattern_2);
-    </script>
+   </script>
 </body>
 </html>

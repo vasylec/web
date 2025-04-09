@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        margin-top: 100px;
+    }
+
+    i{
+        font-size: 20px;
+        color: rgb(125, 148, 33);
+    }
+
+    .box1 , .box2 , .box3{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .box>div{
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+    }
+
+    .t{
+        display: flex;
+        justify-content: center;
+    }
+
+    .t>p{
+        padding: 50px;
+        font-size: 100px;
+    }
+
+</style>
+<body>
+<script>
+        const box1 = document.createElement('div');
+        const box2 = document.createElement('div');
+        const box3 = document.createElement('div');
+        box1.className = 'box1';
+        box2.className = 'box2';
+        box3.className = 'box3';
+
+
+        const box = document.createElement('div');
+        box.classList.add('box');
+        box.appendChild(box1);
+        box.appendChild(box2);
+        box.appendChild(box3);
+
+
+        const n1 = Number(prompt("Introduceti un numar pana la 30"));
+        const n2 = Number(prompt("Introduceti un numar pana la 30"));
+
+        
+
+
+        const t1 = document.createElement('p');
+        const t2 = document.createElement('p');
+        const t3 = document.createElement('p');
+        const plus = document.createElement('p');
+        const egal = document.createElement('p');
+
+        const t = document.createElement('div');
+        t.classList.add('t');
+        t.appendChild(t1);
+        t.appendChild(plus);
+        t.appendChild(t2);
+        t.appendChild(egal);
+        t.appendChild(t3);
+
+        t1.textContent = n1;
+        t2.textContent = n2;
+        t3.textContent = n2 + n1;
+        plus.textContent = '+';
+        egal.textContent = '=';
+
+        
+        
+        
+        
+        if(n1 + n2 < 60){
+            for (let i = 0; i < n1; i++) {
+                const i = document.createElement('i');
+                i.className = 'fa-solid fa-bug'
+                box1.appendChild(i);
+            }
+    
+            for (let i = 0; i < n2; i++) {
+                const i = document.createElement('i');
+                i.className = 'fa-solid fa-bug'
+                box2.appendChild(i);
+            }
+    
+            for (let i = 0; i < n1 + n2; i++) {
+                const i = document.createElement('i');
+                i.className = 'fa-solid fa-bug'
+                box3.appendChild(i);
+            }
+        }   
+        else{
+            t.textContent = 'Numerele introduse sunt prea mari';
+            t.style.fontSize = "50px";
+            t.style.marginTop = "100px";
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        document.body.append(box);
+        document.body.append(t);
+    </script>
+</body>
+</html>

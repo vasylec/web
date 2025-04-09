@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    *{
+        font-family: Roboto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    i{
+        font-size: 300px;
+    }
+    h2{
+        color: orange;
+    }
+    h3{
+        color: rgb(74, 52, 12);
+    }
+    h4{
+        color: rgb(110, 34, 182);
+    }
+    div>p{
+        margin-left: 30px;
+        font-size: 50px;
+    }
+    body>div{
+        display: flex;
+        margin-top: 100px;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+    }
+
+    .div2{
+        margin: 0 200px;
+        margin-top: 70px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size:xx-large;
+    }
+    .div2>div{
+        margin-top: 20px;
+        display: flex;
+    }
+
+    #span1{
+        background-color: orange;
+        padding: 10px 20px;
+    }
+    #span2{
+        background-color: teal;
+        padding: 10px 20px;
+    }
+
+    .div1{
+        color: orange;
+    }
+
+    .div3{
+        color: teal;
+    }
+</style>
+<body>
+    
+    <div>
+        <div class="div1">
+            <i class="fa-solid fa-person"></i>
+            <p id="man">0</p>
+        </div>
+        <div class="div2">
+            <h2>2019*</h2>
+            <h3>TOTAL</h3>
+            <h4 id="total">0</h4>
+            <div>
+                <span id="span1">1 277 180</span>
+                <span id="span2">1 404 555</span>
+            </div>
+        </div>
+        <div class="div3">
+            <i class="fa-solid fa-person-dress"></i>
+            <p id="woman">0</p>
+        </div>
+        
+    </div>
+
+
+    <script>
+        const man = document.getElementById('man');
+        const woman = document.getElementById('woman');
+        const span1 = document.getElementById('span1');
+        const span2 = document.getElementById('span2');
+        const total = document.getElementById('total');
+    
+    
+        const n1 = Number(span1.textContent.replaceAll(' ',''));
+        const n2 = Number(span2.textContent.replaceAll(' ',''));
+        const t = n1 + n2;
+
+        const res = t.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        total.textContent = res;
+
+        woman.textContent = (((n2/t) * 100).toFixed(1) + "%").replace('.',',');
+        man.textContent = (((n1/t) * 100).toFixed(1) + "%").replace('.',',');
+    
+    
+    </script>
+    
+</body>
+</html>

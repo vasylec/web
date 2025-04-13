@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <style>
@@ -18,6 +19,11 @@
         margin: 0 auto;
     }
     
+    h2{
+        color: #f87414;
+        font-size: 35px;
+    }
+
     .button{
         background-color: #f87414;
         color: white;
@@ -39,7 +45,6 @@
     }
     
     header{
-        /* background-color: blue; */
         height: 100px;
         justify-content: space-between;
         align-items: center;
@@ -79,7 +84,7 @@
         color: white;
         font-size: 80px;
     }
-    p{
+    .img-section p{
         text-align: center;
         color: white;
         font-size: 20px;
@@ -88,10 +93,385 @@
         text-align: center;
     }
     
+    .aboutus-section{
+        margin-top: 100px;
+        height: 604px;
+        display: flex;
+    }
 
+    .aboutus-text{
+        margin-top: 100px;
+        height: 100px;
+        width: 50%;
+        p{
+            margin-top: 30px;
+            font-size: 25px;
+            color: gray;
+            width: 80%;
+        }
+        .button{
+            margin-top: 30px;
+        }
+    }    
+    .aboutus-img{
+        height: 100px;
+        width: 50%;
+    }
+
+    .aboutus-img img{
+        height: 300px;
+    }
+
+    #Image-2_v1-17-1{
+        float: right;
+    }
+
+    .core-section{
+        margin-top: 100px;
+        height: 693px;
+        text-align: center;
+        h4{
+            font-size: 30px;
+        }
+        p{
+            font-size: 20px;
+            color: gray;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        i{
+            margin-top: 30px;
+            font-size: 70px;
+            margin-bottom: 30px;
+            color: #f87414;
+        }
+        button{
+            margin-top: 50px;
+        }
+    }
+
+    .core-section>div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .core-section>div>div{
+        height: 300px;
+        width: 50%;
+    }
+
+    .work-section{
+        margin-top: 100px;
+        height: 400px;
+        text-align: center;
+    }
+
+    .work-section>div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .work-section>div>div{
+        width: 33%;
+        height: 120px;
+        margin-top: 50px;
+        h2{
+            margin-top: 25px;
+        }
+    }
+
+    #projects>div{
+        border: #f87414 2px solid;
+        width: 35%;
+        height: 130px;
+        margin: 0 auto;
+        border-radius: 100%;
+        h2{
+            margin-top: 30px;
+        }
+    }
+
+    .price-section{
+        margin-top: 100px;
+        height: 650px;
+        text-align: center;
+    }
+
+    .price-section>div{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .price-section>div>div{
+        height: 520px;
+        width: 32%;
+        border: #f87414 2px solid;
+        border-radius: 20px;
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.55);
+        transition: 200ms ease-in-out;
+        h4{
+            font-size: 40px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        p{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        button{
+            margin-top: 20px;
+        }
+        span{
+            color: #f87414;
+            font-size: 40px;
+        }
+    }
+    .price-section>div>div:hover{
+        transform: scale(1.05);
+    }
+
+    .feedback-section{
+        margin-top: 100px;
+        height: 300px;
+        text-align: center;
+    }
+    .feedback-section>div{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .feedback-section>div>div{
+        background-color:#e2bb9f;
+        text-align: left;
+        width: 45%;
+        padding: 15px;
+        border-radius: 15px;
+
+        p{
+            margin-bottom: 50px;
+        }
+        img{
+            height: 100px;
+            position: absolute;
+            margin-left: 400px;
+            width: 100px;
+            object-fit: cover;
+            object-position: -40px;
+            border-radius: 100%;
+            margin-top: -50px;
+            border: #f87414 5px solid;
+        
+        };
+    }
+    .contact-section{
+        height: 200px;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .contact-section>div{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .contact-section>div>div{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        width: 30%;
+        margin-top: 50px;
+        font-size: 18px;
+
+        span{
+            color: #f87414;
+        }
+    }
+
+
+    .contact-section>div>div:nth-child(3){
+        width: 40%;
+    }
+
+    .footer-section{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        font-size: 27px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        
+    }
+
+    #mn{
+        display: none;
+    }
+
+    @media(min-width: 900px){
+        header .menu{
+            display: none;
+        }
+    }
+
+    @media(max-width: 1250px){
+        .container{
+            width: 900px;
+        }
+        #projects>div{
+            width: 45%;
+        }
+        .feedback-section>div>div{
+            img{
+                margin-left: 270px;
+            };
+        }
+    }
+    @media(max-width: 899px){
+        header nav{
+            display: none;
+        }
+        header{
+            justify-content: center;
+        }
+        header hr{
+            width: 30px;
+            border: 1px solid  #f87414;
+        }
+        header .menu{
+            position: absolute;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        header .menu:hover{
+            cursor: pointer;
+        }
+
+        #mn:checked ~ nav {
+            display: block;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 910px;
+            background-color: white;
+            z-index: 1000;
+            animation: fadeInDown 0.3s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+
+        .logo{
+            /* margin-left: -60px; */
+        }
+
+
+
+
+
+
+
+
+        .img-section{
+            width: 900px;
+        }
+        h1{
+            font-size: 60px;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .aboutus-section{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 1300px;
+            align-items: center;
+            text-align: center;
+            p{
+                width: 100%;
+            }
+        }
+        .aboutus-img{
+            margin-top: 500px;
+        }
+
+        .core-section{
+            height: 1350px;
+        }
+
+        .core-section h2{
+            margin-bottom: 50px;
+        }
+
+        .core-section>div>div{
+            width: 80%;
+        }
+
+        .work-section{
+            height: 500px;
+        }
+
+        .work-section>div{
+            justify-content: center;
+        }
+
+        .work-section>div>div{
+            width: 40%;
+        }
+
+        .price-section{
+            height: 1950px;
+        }
+
+        .price-section>div{
+            margin-top: 100px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 1750px;
+        }
+
+        .price-section>div>div{
+            transform: scale(1.1);
+        }
+
+        .price-section>div>div:hover{
+            transform: scale(1.15);
+        }
+}
 </style>
 <body>
     <header class="container">
+        <input type="checkbox" name="mn" id="mn">
+        <label for="mn">
+            <div class="menu" id="">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </label>
         <div class="logo">adsWorld</div>
         <nav>
             <ul>
@@ -110,6 +490,163 @@
         <div>
             <button class="button">Get Started</button>
         </div>
+    </section>
+    <section class="container aboutus-section">
+        <div class="aboutus-text">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam pariatur nobis laboriosam vero optio numquam dolores error praesentium distinctio.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam pariatur nobis laboriosam vero optio numquam dolores error praesentium distinctio.</p>
+            <button class="button">Learn More</button>
+        </div>
+        <div class="aboutus-img">
+            <img src="https://www.sashwindowslondonltd.co.uk/wp-content/uploads/2020/10/women-in-business.jpg" alt="">
+            <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/UAB/2022/07/18193751/Image-2_v1-17-1.jpg" alt="" id="Image-2_v1-17-1">
+        </div>
+    </section>
+    <section class="container core-section">
+        <h2>Core Activities</h2>
+        <div>
+            <div>
+                <i class="fa-solid fa-paper-plane"></i>
+                <h4>Social Media Marketing</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur pariatur tempora ipsum, asperiores tempore sit exercitationem reiciendis animi amet  </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-sliders"></i>
+                <h4>Marketing Strategy</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur pariatur tempora ipsum, asperiores tempore sit exercitationem reiciendis animi amet  </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <h4>Email Marketing</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur pariatur tempora ipsum, asperiores tempore sit exercitationem reiciendis animi amet  </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-gears"></i>
+                <h4>SEO Marketing</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur pariatur tempora ipsum, asperiores tempore sit exercitationem reiciendis animi amet  </p>
+            </div>
+        </div>
+        <button class="button">Get Started</button>
+    </section>
+    <section class="work-section container">
+        <h2>We are dedicated to our work</h2>
+        <div>
+            <div id="projects">
+                <div>
+                    <h2>500K</h2>
+                    <p>Project Done</p>
+                </div>
+            </div>
+            <div>
+                <h2>120K</h2>
+                <p>Satisfied Clients</p>
+            </div>
+            <div>
+                <h2>100%</h2>
+                <p>Customer Satisfaction</p>
+            </div>
+            <div>
+                <h2>100K</h2>
+                <p>Active Projects</p>
+            </div>
+            <div>
+                <h2>10</h2>
+                <p>Years Experience</p>
+            </div>
+            <div>
+                <h2>50K</h2>
+                <p>Employees</p>
+            </div>
+        </div>
+    </section>
+    <section class="price-section container">
+        <h2>Affordable Pricing</h2>
+        <div>
+            <div>
+                <h4>Basic</h4>
+                <p>Seo Marketing</p>
+                <p>Content Thinking</p>
+                <p>Marketing Strategy</p>
+                <p>Social Media Marketing</p>
+                <p>Business Enlightenment</p>
+                <p><span>$70</span>/month</p>
+                <button class="button">Start Now</button>
+            </div>
+            <div>
+                <h4>Standard</h4>
+                <p>Seo Marketing</p>
+                <p>Content Thinking</p>
+                <p>Marketing Strategy</p>
+                <p>Social Media Marketing</p>
+                <p>Business Enlightenment</p>
+                <p><span>$130</span>/month</p>
+                <button class="button">Start Now</button>
+            </div>
+            <div>
+                <h4>Premium</h4>
+                <p>Seo Marketing</p>
+                <p>Content Thinking</p>
+                <p>Marketing Strategy</p>
+                <p>Social Media Marketing</p>
+                <p>Business Enlightenment</p>
+                <p><span>$200</span>/month</p>
+                <button class="button">Start Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="container feedback-section">
+        <h2>Customer Feedbacks</h2>
+        <div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora rem corporis dicta distinctio laborum.</p>
+                <h4>Alex Robinson</h4>
+                <h5>Marketing Director</h5>
+                <img src="https://img.freepik.com/free-photo/medium-shot-man-working-as-lawyer_23-2151202441.jpg?semt=ais_hybrid&w=740" style="object-position: 0px;" alt="">
+            
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora rem corporis dicta distinctio laborum.</p>
+                <h4>James Doe</h4>
+                <h5>Creative Manager</h5>
+                <img src="https://dfjx2uxqg3cgi.cloudfront.net/img/photo/136776/136776_00_2x.jpg?20171214201934" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="container contact-section">
+        <h2>Let's Make Something Amazing Together</h2>
+        <div>
+            <div>
+                <div>
+                    <span>Home</span>
+                    <p>Services</p>
+                    <p>Pricing</p>
+                    <p>About</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span>Contact Us</span>
+                    <p>24 Lekki Street, Lagos, Nigeria</p>
+                    <p>Call: 0900 - 000 - 0000</p>
+                    <p>Email: info@adsWorld_agency.com</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span>Learn More</span>
+                    <p>How it works</p>
+                    <p>FAQ</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-section container">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
     </section>
 </body>
 </html>

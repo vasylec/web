@@ -365,17 +365,36 @@
       // });
       
       
+
+
       
       table.forEach((element,index) => {
-        row_data.innerHTML += `<tr>`;
+        row_data.innerHTML += `<tr>` + td() + `</tr>`;
         
-          forEach(data => {
-            `<td>${data}</td>`;
-          });
 
+          function td(){
+            let a = '';
 
-          row_data.innerHTML += `</tr>`;
+            a += `<td>${index + 1}</td>`;
+            element.forEach(data => {
+              a += `<td>${data}</td>`;
+            });
+            a += `<td>${element[3] * element[2]}</td>`;
+            return a;
+          }
       });
     </script>
+    <style>
+      th{
+        padding: 20px;
+        background-color: antiquewhite;
+        border: 1px solid black;
+      }
+      td{
+        padding: 20px;
+        background-color: aliceblue;
+        border: 1px solid black;
+      }
+    </style>
   </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    th{
+        background-color: aquamarine;
+    }
+    th,td{
+        padding: 10px;
+        /* border: 1px solid black; */
+    }
+    table{
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    h2{
+        margin-top: 100px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2>Tabel</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>Nr.</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Toatal Price</th>
+          </tr>
+        </thead>
+        <tbody id="t_body"></tbody>
+      </table>
+<script>
+
+const tabel = [
+        [
+          "Sneakers Shoes 2020 For Men",
+          "Fugiat voluptates quasi nemo, ipsa perferendis",
+          44.99,
+          2,
+        ],
+        [
+          "Sneakers Shoes 2021 For Women",
+          "Fugiat voluptates quasi nemo, ipsa perferendis",
+          30.99,
+          1,
+        ],
+        [
+          "Sneakers Shoes 2022 For Men",
+          "Fugiat voluptates quasi nemo, ipsa perferendis",
+          35.5,
+          1,
+        ],
+        [
+          "Sneakers Shoes 2022 For Women",
+          "Fugiat voluptates quasi nemo, ipsa perferendis",
+          76.99,
+          4,
+        ],
+        [
+          "Sneakers Shoes 2023 For Men",
+          "Fugiat voluptates quasi nemo, ipsa perferendis",
+          40,
+          1,
+        ],
+      ];
+
+      function genereazaRand([title, description, price, quantity], index) {
+        return `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${title}</td>
+          <td>${description}</td>
+          <td>$${price.toFixed(2)}</td>
+          <td>${quantity}</td>
+          <td>$${(price * quantity).toFixed(2)}</td>
+        </tr>
+      `;
+      }
+
+      const html = tabel.map(genereazaRand).join('');
+      t_body.innerHTML = html;
+</script>  
+</body>
+</html>

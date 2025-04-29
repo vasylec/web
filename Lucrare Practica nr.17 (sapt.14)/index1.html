@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Elementul maximal dintre 3 numere:</h2>
+    <br>
+    <form action="" method="get">
+        <label for="input_1">Numarul 1 = </label>
+        <input type="number" name="" id="input_1">
+        <br>
+        <label for="input_2">Numarul 2 = </label>
+        <input type="number" name="" id="input_2">
+        <br>
+        <label for="input_3">Numarul 3 = </label>
+        <input type="number" name="" id="input_3">
+        <br>
+        <input type="button" value="Determina"><br>
+        <input type="reset" value="Sterge">
+    </form>
+    <br>
+    <h3>Elementul maxim este = </h3>
+
+    <script>
+        const input = document.querySelectorAll('input[type="number"]');       
+        const submit_button = document.querySelector('input[type="button"]');
+        const output = document.querySelector('h3');
+        const reset_button = document.querySelector('input[type="reset"]');
+
+        submit_button.addEventListener("click",() => {
+            console.log(Math.max(input[0].value, input[1].value, input[2].value))
+            output.textContent = `Elementul maxim este = ${Math.max(input[0].value, input[1].value, input[2].value)}`;
+        });
+
+        reset_button.addEventListener("click", () => {
+            output.textContent = `Elementul maxim este = `;
+        });
+    </script>
+</body>
+</html>

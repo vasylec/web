@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="input_1">Enter x1 value</label>
+        <input type="number" name="" id="input_1"><br>
+
+        <label for="input_2">Enter x2 value</label>
+        <input type="number" name="" id="input_2"><br>
+
+        <label for="input_3">Enter y1 value</label>
+        <input type="number" name="" id="input_3"><br>
+
+        <label for="input_4">Enter y2 value</label>
+        <input type="number" name="" id="input_4"><br><br>
+
+        <input type="button" value = "Calculate"><br><br>
+
+        <label for="">Distance = </label>
+        <label for="" id="output"></label>
+    </form>
+
+    <script>
+        
+        const submit = document.querySelector('input[type="button"]');
+        
+        submit.addEventListener("click", () => {           
+            const x1 = Number(document.querySelector('#input_1').value);
+            const x2 = Number(document.querySelector('#input_2').value);
+            const y1 = Number(document.querySelector('#input_3').value);
+            const y2 = Number(document.querySelector('#input_4').value);
+            const output = document.querySelector('#output');
+            output.textContent = Math.sqrt(Math.pow((x1 - y1), 2) + Math.pow((x2 - y2), 2));
+        }); 
+
+    </script>
+</body>
+</html>

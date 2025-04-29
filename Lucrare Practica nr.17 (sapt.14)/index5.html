@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <td>Enter a phone number <br> Format: [in the form (555) 555-5555]</td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+    </table>
+
+
+
+
+    <script>
+        var a = '(123) 555-5555';
+
+        console.log(a.split(" ")[0].replace("(","").replace(")",""));
+        console.log(a.split(" ")[1]);
+    </script>
+</body>
+</html>

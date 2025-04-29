@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        display: flex;
+        align-items: center;
+    }
+    input[type="number"]{
+        width: 50px;
+        height: 20px;
+    }
+
+    input[type="button"]{
+        position: absolute;
+        top: 100px;
+    }
+
+    #output{
+        position: absolute;
+        top: 150px;
+    }
+</style>
+<body>
+    <form action="" method="get">
+        <input type="number" name="" id="a"><p>X<sup>2</sup>+</p>
+        <input type="number" name="" id="b"><p>X+</p>
+        <input type="number" name="" id="c"><p>=0</p>
+
+        <br>
+        <input type="button" value="Rezolva">
+
+        <p id="output">Solutia este: </p>
+    </form>
+
+    <script>
+        const button = document.querySelector('input[type="button"]');
+        
+        button.addEventListener("click", () => {
+            const a = document.querySelector('#a').value;
+            const b = document.querySelector('#b').value;
+            const c = document.querySelector('#c').value;
+            const output = document.querySelector('#output');
+            var delta = b * b - 4 * a * c;
+            
+            // console.log(b)
+            console.log(delta);
+
+            if(delta < 0){
+                output.textContent = 'Solutia este: Ecuatia data nu are solutii';
+            }
+            else if (delta == 0){
+                output.innerHTML = `Solutia este:<br><br>delta = ${delta} <br> x = ${-b/2*a}`;
+            }
+            else if(delta > 0){
+                output.innerHTML = `Solutia este:<br><br>delta = ${delta} 
+                <br> x<sub>1</sub> = ${(-b+Math.sqrt(delta))/2 * a}
+                <br> x<sub>2</sub> = ${(-b-Math.sqrt(delta))/2 * a}`;
+            }
+        });
+
+    </script>
+</body>
+</html>

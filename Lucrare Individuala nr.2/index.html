@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+    }
+    .container{
+        width: 1400px;
+        margin: 0 auto;
+    }
+
+    header{
+        color: white;
+    }
+    header>nav{
+        background-color: #08243c;
+        height: 50px;
+    }
+    header nav>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav>div>div{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        gap: 20px;
+    }
+    header ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    header a{
+        color: white;
+        text-decoration: none;
+    }
+
+    header i{
+        font-size: 22px;
+    }
+
+
+    header>div{
+        background-color: #0b446d;
+        height: 70px;
+    }
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div>
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <p>+373-0000-0000</p>
+                    <p>(09:00 - 20:00)</p>
+                </div>
+                <div>
+
+                    <ul>
+                        <li><a href="">Friends</a></li>
+                        <li><a href="">Credit</a></li>
+                        <li><a href="">Showroom</a></li>
+                        <li><a href="">Promoții</a></li>
+                        <li><a href="">Concursuri</a></li>
+                        <li><a href="">Livrare</a></li>
+                        <li><a href="">Contacte</a></li>
+                        <li><a href=""><i class="fa-solid fa-moon theme"></i></a></li>
+                    </ul>
+
+
+
+
+                   
+                </div>
+            </div>
+        </nav>
+        <div>
+
+        </div>
+    </header>
+    <script>
+        const theme_button = document.querySelector('.theme');
+        
+        const savedTheme = localStorage.getItem('theme-icon');
+
+
+        localStorage.setItem('theme-icon','sun');
+
+        if(savedTheme == "fa-sun"){
+            // theme_button.classList.add("fa");
+        }
+        
+        
+        
+        light_button.addEventListener("click", ()=> {
+            if(light_button.classList.contains("fa-moon")){
+                light_button.classList.remove('fa-moon');
+                light_button.classList.add('fa-sun');
+            }
+            else{
+                light_button.classList.add('fa-moon');
+                light_button.classList.remove('fa-sun');
+
+            }
+        });
+
+    </script>
+</body>
+</html>

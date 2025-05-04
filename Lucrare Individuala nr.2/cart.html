@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b7dc083fc7.js" crossorigin="anonymous"></script>
     <title>Document</title>
-    <script src="input-range.js" defer></script>
-    <script src="filter.js" defer></script>
-    <script src="search.js" defer></script>
-    <script src="pagination.js" defer></script>
     <script src="theme-behaviour.js" defer></script>
+    <script src="search.js" defer></script>
+    <!-- <script src="input-range.js" defer></script> -->
+    <!-- <script src="filter.js" defer></script> -->
+    <!-- <script src="pagination.js" defer></script> -->
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -137,6 +137,7 @@
 
     .content>.container{
         display: flex;    
+        /* flex-direction: column; */
     }
 
     .filter{
@@ -227,33 +228,31 @@
 
     .product-list{
         display: grid;
-        grid-template-columns: repeat(4, auto);
-        justify-content: space-between;
-        row-gap: 50px;
+        grid-template-columns: repeat(1, auto);
+        justify-content: start;
+        row-gap: 10px;
+        column-gap: 10px;
         width: 90%;
     }
 
     .product-list>div{
-        width: 270px;
-        /* background-color: red; */
-        height: 500px;
+        width: 1100px;
+        height: 150px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
 
         border: 1px solid gray;
         border-radius: 20px;
 
         img{
             object-fit: contain;
-            width: 90%;
-            height: 250px;
-            margin: 0 auto;
+            width: 130px;
+            height: 130px;
         }
 
-        img:hover{
-            cursor: pointer;
-        }
+     
 
         h4{
             width: 90%;
@@ -266,6 +265,8 @@
             margin: 0 auto;
             font-weight: bold;
             font-size: 20px;
+            text-align: end;
+            margin-right: 20px;
 
             span{
                 font-size: 16px;
@@ -274,32 +275,15 @@
             }
         }
 
-        button{
-            height: 50px;
-            font-size: 20px;
-            width: 70%;
-            margin: 0 auto;
-            background-color: white;
-            border: 1px solid black;
-            border-radius: 10px;
+        i{
+            margin-right: 40px;
+            font-size: 25px;
+        }
 
+        i:hover{
             cursor: pointer;
-            transition: ease-in-out 0.2s;
-
         }
 
-        button:hover{
-            background-color: rgb(255, 34, 34);
-            border: 0px;
-        }
-
-        .addToWishList{
-            width: 20%;
-        }
-
-        div{
-            text-align: center;
-        }
     }
 
     .filter button{
@@ -345,7 +329,8 @@
 
 
     .popup {
-        display: none; 
+        display: none;
+
         position: fixed;
         top: 0;
         left: 0;
@@ -360,8 +345,8 @@
             border-radius: 20px;
             padding: 20px;
             background-color: white;
-            height: 400px;
-            width: 800px;
+            height: 350px;
+            width: 600px;
 
             display: flex;
             flex-direction: column;
@@ -375,12 +360,24 @@
         .popup-title{
             display: flex;
             justify-content: space-around;
+            font-size: 20px;
         }
         .popup-desc{
             display: flex;
+            flex-direction: column;
 
             div{
-                margin-left: 150px;
+                text-align: center;
+                input{
+                    margin-bottom: 10px;
+                    width: 400px;
+                    height: 30px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                input[type="button"]{
+                    width: 150px;
+                }
             }
             button{
             height: 30px;
@@ -402,8 +399,6 @@
         }
     }
 
-    
-
     .popup-content {
         background: white;
         padding: 20px;
@@ -411,6 +406,8 @@
         position: relative;
         min-width: 300px;
     }
+    
+
 
     #close-popup {
         /* position: absolute; */
@@ -418,6 +415,48 @@
         right: 12px;
         cursor: pointer;
         font-size: 20px;
+    }
+
+    .content .checkout{        
+        display: flex;
+        padding-bottom: 50px;
+        justify-content: end;
+
+        font-size: 20px;
+
+        >div{
+            background-color: rgb(235, 235, 235);
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        button{
+            padding: 10px 30px;
+            font-size: 17px;
+            border: 1px solid green;
+            border-radius: 10px;
+            background-color:  white;
+            color: green;
+            width: 180px;
+
+            transition: ease-in-out 0.2s;
+            i{
+                font-size: 24px;
+                float: left;
+            }
+        }
+
+        button:hover{
+            color: white;
+            background-color: green;
+            cursor: pointer;
+        }
     }
 
 </style>
@@ -447,7 +486,9 @@
         <div>
             <div class="container">
                 <div class="catalog">
-                    <i class="fa-solid fa-bars"></i>
+                    <a href="index.html">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
                     <p>Catalog</p>
                 </div>
                 <div class="search-bar">
@@ -461,9 +502,7 @@
                         </a>
                     </button>
                     <button>
-                        <a href="cart.html">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </button>
                 </div>
             </div>
@@ -471,160 +510,155 @@
     </header>
     <div class="content">
         <div class="container">
-            <div class="filter">
-                <ul>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Preț</label>
-                        </div>
-                        <div class="f-properties">
-                            <div class="range-container">
-                                <div class="range-track"></div>
-                                <input type="range" name="" id="min-range-p" min="0" max="74890" value="0">
-                                <input type="range" name="" id="max-range-p" min="0" max="74890" value="74890">
-                                <input type="number" name="" id="min-number-p">
-                                <input type="number" name="" id="max-number-p">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Brand</label>
-                        </div>
-                        <div class="f-properties">
-                            <input type="checkbox" name="" id="gigabyte-cbox"><label for="gigabyte-cbox">Gigabyte</label><br>
-                            <input type="checkbox" name="" id="asus-cbox"><label for="asus-cbox">Asus</label><br>
-                            <input type="checkbox" name="" id="asrock-cbox"><label for="asrock-cbox">ASRock</label><br>
-                            <input type="checkbox" name="" id="msi-cbox"><label for="msi-cbox">MSI</label><br>
-                            <input type="checkbox" name="" id="other-cbox"><label for="other-cbox">Altele</label>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Producător GPU</label>
-                        </div>
-                        <div class="f-properties">
-                            <input type="checkbox" name="" id="nvidia-cbox"><label for="nvidia-cbox">NVIDIA</label><br>
-                            <input type="checkbox" name="" id="amd-cbox"><label for="amd-cbox">AMD</label><br>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Frecvența Max procesor (MHz)</label>
-                        </div>
-                        <div class="f-properties">
-                            <div class="range-container">
-                                <div class="range-track"></div>
-                                <input type="range" name="" id="min-range-f" min="0" max="3370" value="0">
-                                <input type="range" name="" id="max-range-f" min="0" max="3370" value="3370">
-                                <input type="number" name="" id="min-f">
-                                <input type="number" name="" id="max-f">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Memorie</label>
-                        </div>
-                        <div class="f-properties">
-                            <div class="range-container">
-                                <div class="range-track"></div>
-                                <input type="range" name="" id="min-range-m" min="0" max="32" value="0">
-                                <input type="range" name="" id="max-range-m" min="0" max="32" value="32">
-                                <input type="number" name="" id="min-m">
-                                <input type="number" name="" id="max-m">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Numărul de ventilatoare</label>
-                        </div>
-                        <div class="f-properties">
-                            <div class="range-container">
-                                <div class="range-track"></div>
-                                <input type="range" name="" id="min-range-v" min="1" max="3" value="1">
-                                <input type="range" name="" id="max-range-v" min="1" max="3" value="3">
-                                <input type="number" name="" id="min-v">
-                                <input type="number" name="" id="max-v">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="f-btn">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
-                            <label for="">Lungime</label>
-                        </div>
-                        <div class="f-properties">
-                            <div class="range-container">
-                                <div class="range-track"></div>
-                                <input type="range" name="" id="min-range-l" min="0" max="400" value="0">
-                                <input type="range" name="" id="max-range-l" min="0" max="400" value="400">
-                                <input type="number" name="" id="min-l">
-                                <input type="number" name="" id="max-l">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <button id="submit-filters">Aplicare Filtre</button>
-                        <button id="reset-filters">Resetare Filtre</button>
-                    </li>
-                </ul>
-            </div>
             <div class="product-list">
                 <div>
                     <img src="https://cdn-ultra.esempla.com/storage/webp/36801b06-7673-42ff-a852-25c8709a69f7.webp" alt="">
                     <h4>Placă Video ASUS ROG-ASTRAL-RTX5080-O16G-GAMING, 16GB GDDR7 256bit</h4>
                     <p>40 490 <span>lei</span></p>
-                    <button>În coș</button>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="checkout">
+                <div>
+                    <div>
+                        <p id="buc">În coș 0 buc.</p>
+                        <p id="totalPrice">Total 0 <span>lei</span></p>
+                    </div>
+                    <button id="buy">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>Cumpără</p>
+                    </button>
                 </div>
             </div>
             <div id="popup" class="popup">
                 <div>
                     <div class="popup-title">
-                        <h4></h4>
+                        <h4>Achitare online</h4>
                         <span id="close-popup">&times;</span>
                     </div>
-                    <div class="popup-desc">
-                        <img src="" alt="">
-                        
+                    <div class="popup-desc">                        
                         <div>
-                            <!-- <p>Model: <span>Geforce RTX 5080</span></p>
-                            <p>Producător: <span>NVIDIA</span></p>
-                            <p>Brand: <span>ASUS</span></p>
-                            <p>Memorie: <span>16</span></p>
-                            <p>Frecvența procesor: <span>30000</span></p>
-                            <p>Rezoluție maximă: <span>7680x4320</span></p>
-                            <p>Conecțiuni: <span>2x HDMI 2.1, 3x DP 2.1</span></p>
-                            <p>PSU recomandat: <span>850 W</span></p>
-                            <p>Număr ventilatoare: <span>3</span></p>
-                            <p>Lungime: <span>35.76</span> cm</p>
-                            <br>
-                            <p>Pret: <span>1000</span> lei</p>
-                            <br>
-                            <button>În coș</button> -->
+                            <input type="text" name="" id="unu" placeholder="ID format din 16 cifre (format: xxxx-xxxx-xxxx-xxxx)"><br>
+                            <input type="text" name="" id="doi" placeholder="Data expirării"><br>
+                            <input type="text" name="" id="trei" placeholder="Numele Prenumele"><br>
+                            <input type="text" name="" id="patru" placeholder="CVV"><br>
+                            <input type="button" value="Achitare">
+                            <p>ㅤ</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pag">
-            <p>1</p>
-            <input type="button" value="<---" id="prev">
-            <input type="button" value="--->" id="next">
-        </div>
     </div>
 
 <script>
+    const items = JSON.parse(localStorage.getItem('cartlist'));
 
-    
+    const productList = document.querySelector('.product-list');
+    productList.innerHTML = '';
+
+    let totalPrice = 0;
+
+    if(items.length != 0)
+        items.forEach(element => {
+            totalPrice += element.price;
+            
+            const div = document.createElement('div');
+            const img = document.createElement('img');
+            const h4 = document.createElement('h4');
+            const p = document.createElement('p');
+            const i = document.createElement('i');
+
+            img.src = element.img;
+            h4.textContent = element.title;
+            p.innerHTML = element.price + '<span> lei</span>';
+            i.classList.add('fa-solid');
+            i.classList.add('fa-xmark');
+
+            i.addEventListener('click', () => {
+                const tempItems = items.filter(item => item !== element);
+                console.log(tempItems);
+                localStorage.setItem('cartlist', JSON.stringify(tempItems));
+                location.reload();
+            })
+
+
+            div.appendChild(img);
+            div.appendChild(h4);
+            div.appendChild(p);
+            div.appendChild(i);
+
+            productList.appendChild(div);
+        });
+
+        document.querySelector('#buc').textContent = `În coș ${items.length} buc.`
+        document.querySelector('#totalPrice').textContent = `Total ${totalPrice} lei`;
+
+
+
+
+        document.querySelector('#buy').addEventListener('click', () => {
+            document.querySelector('.popup').style.display = 'flex';
+        });
+        document.querySelector('#close-popup').addEventListener('click', () => {
+            document.querySelector('.popup').style.display = 'none';
+        });
+
+        document.querySelector('input[type="button"]').addEventListener('click', () => {
+            let input = document.querySelector('#unu').value;
+
+            let sum_odd_digits = 0;
+            let sum_even_digits = 0;
+            let total = 0;
+
+            input = input.replaceAll('-', '');
+            input = input.replaceAll(' ', '');
+            input = input.split('').reverse().join('');
+
+            for (let i = 0; i < input.length; i += 2) {
+                sum_odd_digits += parseInt(input[i]);
+            }
+            
+            for (let i = 1; i < input.length; i += 2) {
+                
+                let x = parseInt(input[i]) * 2;
+
+                if(x >= 10){
+                    sum_even_digits += (1 + (x % 10));
+                }
+                else{
+                    sum_even_digits += parseInt(input[i] * 2);
+                }
+                
+            }
+
+            total = sum_even_digits + sum_odd_digits;
+
+
+            
+            console.log(document.querySelector('#patru').value);
+
+            if(
+                document.querySelector('#unu').value == '' ||
+                document.querySelector('#doi').value == '' ||
+                document.querySelector('#trei').value == '' ||
+                document.querySelector('#patru').value == '' 
+            ){
+                
+                document.querySelector('.popup-desc p').textContent = 'Nu puteti lăsa spatii libere!';
+            }
+            else{
+                if(total % 10 == 0){
+                    document.querySelector('.popup-desc p').textContent = 'Cardul a fost validat!';
+                }
+                else{
+                    document.querySelector('.popup-desc p').textContent = 'Card invalid!';
+                }
+            }
+            //378282246310005
+        })
+
+
 </script>
 </body>
 </html>

@@ -201,10 +201,23 @@
                         popup.style.display = 'none';
                     });
 
-                    
-                    button2.addEventListener('click', () => {
-                        console.log('go');
+                    button.addEventListener('click', () => {
+                        let k = false;
                         
+                        clist.forEach((el) => {
+                            if(JSON.stringify(el) == JSON.stringify(element)){
+                                k = true;
+                            }
+                        });
+                        
+                        
+                        if(k == false){
+                            clist.push(element);
+                            localStorage.setItem('cartlist', JSON.stringify(clist));
+                        }                        
+                    });
+
+                    button2.addEventListener('click', () => {
                         let k = false;
                         
                             wlist.forEach((el) => {
@@ -285,10 +298,23 @@
                         popup.style.display = 'none';
                     });
 
-                    
-                    button2.addEventListener('click', () => {
-                        console.log('go');
+                    button.addEventListener('click', () => {
+                        let k = false;
                         
+                        clist.forEach((el) => {
+                            if(JSON.stringify(el) == JSON.stringify(element)){
+                                k = true;
+                            }
+                        });
+                        
+                        
+                        if(k == false){
+                            clist.push(element);
+                            localStorage.setItem('cartlist', JSON.stringify(clist));
+                        }                        
+                    });
+
+                    button2.addEventListener('click', () => {
                         let k = false;
                         
                             wlist.forEach((el) => {
@@ -373,9 +399,23 @@
                         popup.style.display = 'none';
                     });
 
-                    button2.addEventListener('click', () => {
-                        console.log('go');
+                    button.addEventListener('click', () => {
+                        let k = false;
                         
+                        clist.forEach((el) => {
+                            if(JSON.stringify(el) == JSON.stringify(element)){
+                                k = true;
+                            }
+                        });
+                        
+                        
+                        if(k == false){
+                            clist.push(element);
+                            localStorage.setItem('cartlist', JSON.stringify(clist));
+                        }                        
+                    });
+
+                    button2.addEventListener('click', () => {
                         let k = false;
                         
                             wlist.forEach((el) => {

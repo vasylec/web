@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter a phone number [in the form (000) 000-0000]</p>
+    <input type="text" name="" id="" onkeyup="myFunction()"><br>
+
+    <p id="area">Area code:</p><br>
+    <p id="number">Number:</p>
+
+<script>
+    const input = document.querySelector('input');
+    
+    function myFunction(){
+        if(input.value.length == 14){
+            document.querySelector('#area').textContent = "Area code: " + input.value.split(" ")[0].replace("(","").replace(")","");
+            document.querySelector('#number').textContent = "Area code: " + input.value.split(" ")[1];
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

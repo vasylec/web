@@ -21,7 +21,7 @@ window.items = [
         brand: 'ASUS'
     },
     {
-        "title": "Placă Video ASRock Challenger Radeon RX 7600 - 1",
+        "title": "Placă Video ASRock Challenger Radeon RX 7600",
         "name": "Radeon RX 7600",
         "prod": "NVIDIA",
         "mem": 20,
@@ -36,7 +36,7 @@ window.items = [
         "brand": 'ASRock'
     },
     {
-        "title": "Placă Video Sapphire NITRO+ Radeon RX 7900 - 2",
+        "title": "Placă Video Sapphire NITRO+ Radeon RX 7900",
         "name": "Radeon RX 7900",
         "prod": "NVIDIA",
         "mem": 16,
@@ -51,7 +51,7 @@ window.items = [
         "brand": 'Generic'
     },
     {
-        "title": "Placă Video MSI SUPRIM X GeForce RTX 4090 - 3",
+        "title": "Placă Video MSI SUPRIM X GeForce RTX 4090",
         "name": "GeForce RTX 4090",
         "prod": "NVIDIA",
         "mem": 12,

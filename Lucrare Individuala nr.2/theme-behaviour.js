@@ -81,6 +81,10 @@ function setDark(){
     
     try {
         document.querySelector('.checkout button').style.backgroundColor = '';
+        document.querySelector('.checkout button').style.color = 'black';
+        document.querySelector('.checkout button').addEventListener("mouseout", () => {
+            document.querySelector('.checkout button').style.backgroundColor = "white";
+        });
         document.querySelector('.checkout>div').style.backgroundColor = '#141414';
         document.querySelector('.checkout>div').style.borderColor = 'gray';
     } catch (error) {

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        .hide{
+            display: none;
+        }
+
+        input[type="button"]{
+            margin-top: 20px;
+        }
+    </style>
+
+<body>
+
+    <form action="" method="get">
+        <input type="radio" name="one" id="r1"><label for="r1">Cub</label>
+        <input type="radio" name="one" id="r2"><label for="r2">Trapez</label>
+
+        <p class="hide" id="p1">Indicati baza mica a trapezului</p>
+        <input type="number" name="" id="d1" class="hide">
+        <p class="hide">Indicati baza mare a trapezului</p>
+        <input type="number" name="" id="d2" class="hide">
+        <p class="hide">Indicati inaltimea trapezului</p>
+        <input type="number" name="" id="d3" class="hide">
+
+        <br>
+        <input type="button" value="Calculeaza" class="hide">
+
+
+        <h4></h4>
+    </form>
+
+
+
+    <script>
+        const r1 = document.querySelector('#r1');
+        const r2 = document.querySelector('#r2');
+
+        r1.addEventListener('click', ()=>{
+            if(r1.checked){
+                const p = document.querySelectorAll('p');
+                const input = document.querySelectorAll('input[type="number"]');
+                p.forEach(element => {
+                    element.classList.add('hide');
+                });
+                input.forEach(element => {
+                    element.classList.add('hide');
+                });
+
+                
+                const p1 = document.querySelector('#p1');
+                const d1 = document.querySelector('#d1');
+                
+                p1.textContent = 'Indicati latura cubului';
+                
+                p1.classList.remove('hide');
+                d1.classList.remove('hide');
+                
+                
+                const button = document.querySelector('input[type="button"]');
+                button.classList.remove('hide');
+                
+                button.addEventListener('click', ()=>{
+                    let v = Math.pow(d1.value, 3);
+
+                    document.querySelector('h4').textContent = "Volumul este: "+v+' u.c.';
+                });
+
+            }
+        });
+        
+        r2.addEventListener('click', ()=>{
+            if(r2.checked){
+                const p = document.querySelectorAll('p');
+                const input = document.querySelectorAll('input[type="number"]');
+                
+                p[0].textContent = 'Indicati baza mica a trapezului';
+                
+                p.forEach(element => {
+                    element.classList.remove('hide');
+                });
+                input.forEach(element => {
+                    element.classList.remove('hide');
+                });
+
+
+
+
+                const button = document.querySelector('input[type="button"]');
+                button.classList.remove('hide');
+
+                button.addEventListener('click', ()=>{
+                    let a = (input[0].value = input[1].value) / 2 * input[2].value;
+
+                    document.querySelector('h4').textContent = "Aria este: "+a+' u.p.';
+                });
+            }
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <p>Indicati un numar:</p>
+    <input type="number"><input type="button" value="Determina">
+    <h4></h4>
+
+    <script>
+        document.querySelector('input[type="button"]').addEventListener('click', ()=>{
+            let nr = document.querySelector('input[type="number"]').value;
+            const h4 = document.querySelector('h4');
+
+            let sum = 0;
+
+            nr = String(nr);
+
+            for(i = 0; i < nr.length; i++){
+                sum += Number(nr[i]);
+            }
+            h4.textContent = 'Suma numerelor: '+sum;
+        }); 
+    </script>
+
+</body>
+</html>
